@@ -120,6 +120,33 @@
   <data name="Arabic" xml:space="preserve">
     <value>Arabic</value>
   </data>
+  <data name="Hash_MD5" xml:space="preserve">
+    <value>MD5 Hash</value>
+  </data>
+  <data name="Hash_RIPMED160" xml:space="preserve">
+    <value>RIPMED160 Hash</value>
+  </data>
+  <data name="Hash_SHA1" xml:space="preserve">
+    <value>SHA1 Hash</value>
+  </data>
+  <data name="Hash_SHA256" xml:space="preserve">
+    <value>SHA256 Hash</value>
+  </data>
+  <data name="Hash_SHA512" xml:space="preserve">
+    <value>SHA512 Hash</value>
+  </data>
+  <data name="Hash_Text" xml:space="preserve">
+    <value>Please enter the text you want to hash</value>
+  </data>
+  <data name="Hash_Tiger" xml:space="preserve">
+    <value>Tiger Hash</value>
+  </data>
+  <data name="Hash_Whirlpool" xml:space="preserve">
+    <value>Whirlpool Hash</value>
+  </data>
+  <data name="Home_Hash_Title" xml:space="preserve">
+    <value>Hash Functions</value>
+  </data>
   <data name="Home_Index_Title" xml:space="preserve">
     <value>Home Page</value>
   </data>

@@ -23,6 +23,10 @@ namespace UCASecurity.Web.Controllers
         {
             return View();
         }
+        public IActionResult Hash()
+        {
+            return View();
+        }
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(
