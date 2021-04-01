@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace UCASecurity.Encryption.Base
 {
-    public class Result<T>
+    public abstract class Function
     {
-        public T payload { get; set; }
-        public StatusCode status { get; set; }
+        public abstract Result<string> Hash(string text);
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace UCASecurity.Encryption.Base
 {
-    public abstract class Algorithm
+    public abstract class Algorithm<T, E>
     {
-        public abstract Result Encrypt(string text, string key);
-        public abstract Result Decrypt(string cipher, string key);
+        public abstract Result<E> Encrypt(T text, string key);
+        public abstract Result<E> Decrypt(T cipher, string key);
         public abstract bool Health();
     }
 }
