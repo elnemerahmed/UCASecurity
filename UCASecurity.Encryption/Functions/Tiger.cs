@@ -8,7 +8,7 @@ using UCASecurity.Encryption.Base;
 
 namespace UCASecurity.Encryption.Functions
 {
-    class Tiger : Function
+    public class Tiger : Function
     {
         public override Result<string> Hash(string text)
         {

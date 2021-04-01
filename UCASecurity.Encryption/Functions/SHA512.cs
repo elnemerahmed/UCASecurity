@@ -8,7 +8,7 @@ using UCASecurity.Encryption.Base;
 
 namespace UCASecurity.Encryption.Functions
 {
-    class SHA512 : Function
+    public class SHA512 : Function
     {
         public override Result<string> Hash(string text)
         {

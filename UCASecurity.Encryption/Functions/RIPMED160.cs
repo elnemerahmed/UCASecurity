@@ -8,7 +8,7 @@ using UCASecurity.Encryption.Base;
 
 namespace UCASecurity.Encryption.Functions
 {
-    class RIPMED160 : Function
+    public class RIPMED160 : Function
     {
         public override Result<string> Hash(string text)
         {

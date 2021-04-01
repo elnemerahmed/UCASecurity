@@ -8,7 +8,7 @@ using UCASecurity.Encryption.Base;
 
 namespace UCASecurity.Encryption.Functions
 {
-    class MD5 : Function
+    public class MD5 : Function
     {
         public override Result<string> Hash(string text)
         {

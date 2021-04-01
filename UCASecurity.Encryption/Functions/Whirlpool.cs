@@ -8,7 +8,7 @@ using UCASecurity.Encryption.Base;
 
 namespace UCASecurity.Encryption.Functions
 {
-    class Whirlpool : Function
+    public class Whirlpool : Function
     {
         public override Result<string> Hash(string text)
         {
