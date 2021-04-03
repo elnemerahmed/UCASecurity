@@ -22,7 +22,7 @@ namespace UCASecurity.Encryption.Algorithms
             try
             {
                 SecureRandom secureRandom = new SecureRandom();
-                var keyGenerationParameters = new KeyGenerationParameters(secureRandom, 4096);
+                var keyGenerationParameters = new KeyGenerationParameters(secureRandom, 2048);
                 var keyPairGenerator = new RsaKeyPairGenerator();
                 keyPairGenerator.Init(keyGenerationParameters);
                 var keyPair = keyPairGenerator.GenerateKeyPair();
@@ -33,7 +33,7 @@ namespace UCASecurity.Encryption.Algorithms
                 return new Result<AsymmetricCipherKeyPair>() { status = StatusCode.Error, payload = null };
             }
         }
-        private Result<string> KeyToString(AsymmetricKeyParameter key)
+        public static Result<string> KeyToString(AsymmetricKeyParameter key)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace UCASecurity.Encryption.Algorithms
                 return new Result<string>() { status = StatusCode.Error, payload = string.Empty };
             }
         }
-        private Result<RsaKeyParameters> StringToPublicKey(string key)
+        public static Result<RsaKeyParameters> StringToPublicKey(string key)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace UCASecurity.Encryption.Algorithms
                 return new Result<RsaKeyParameters>() { status = StatusCode.Error, payload = null };
             }
         }
-        private Result<AsymmetricKeyParameter> StringToPrivateKey(string key)
+        public static Result<AsymmetricKeyParameter> StringToPrivateKey(string key)
         {
             try
             {

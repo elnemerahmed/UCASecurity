@@ -50,7 +50,7 @@
         function fill(id, data) {
             let status = parseInt(data.status);
             let value = data.payload;
-            let error = "@SharedLocalizer.GetLocalizedHtmlString("Functions_Hash_Error")";
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
             if (status == 200)
                 $("#" + id).val(value);
             else
@@ -62,7 +62,7 @@
                 let data = $("#text").val();
                 $.ajax({
                     type: "get",
-                    url: '/api/hash?text=' + data,
+                    url: '/api/hash?text=' + encodeURIComponent(data),
                     success: function (data) {
                         fill('md5', data.md5);
                         fill('ripmed160', data.ripmed160);

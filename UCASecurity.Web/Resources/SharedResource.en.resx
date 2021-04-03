@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
+    <value>Generate RSA Key Pair</value>
+  </data>
+  <data name="Algorithms_RSA_Title" xml:space="preserve">
+    <value>RSA Algorithm</value>
+  </data>
   <data name="Arabic" xml:space="preserve">
     <value>Arabic</value>
   </data>
-  <data name="Functions_Hash_Error" xml:space="preserve">
+  <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
   <data name="Functions_Hash_Title" xml:space="preserve">
@@ -167,5 +173,29 @@
   </data>
   <data name="Layout_Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="RSA_Alert_Text" xml:space="preserve">
+    <value>If don't have keys yet</value>
+  </data>
+  <data name="RSA_Alert_URL_Text" xml:space="preserve">
+    <value>Click here to generate key pair</value>
+  </data>
+  <data name="RSA_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="RSA_CipherResult" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="RSA_PrivateKey" xml:space="preserve">
+    <value>Private Key</value>
+  </data>
+  <data name="RSA_PublicKey" xml:space="preserve">
+    <value>Public Key</value>
+  </data>
+  <data name="RSA_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="RSA_TextResult" xml:space="preserve">
+    <value>Result</value>
   </data>
 </root>

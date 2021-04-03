@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
+    <value>توليد مفاتيح تشفير جديدة لخوارزمية RSA</value>
+  </data>
+  <data name="Algorithms_RSA_Title" xml:space="preserve">
+    <value>خوارزمية RSA</value>
+  </data>
   <data name="English" xml:space="preserve">
     <value>الإنجليزية</value>
   </data>
-  <data name="Functions_Hash_Error" xml:space="preserve">
+  <data name="Error" xml:space="preserve">
     <value>خطأ</value>
   </data>
   <data name="Functions_Hash_Title" xml:space="preserve">
@@ -167,5 +173,29 @@
   </data>
   <data name="Layout_Home" xml:space="preserve">
     <value>الرئيسية</value>
+  </data>
+  <data name="RSA_Alert_Text" xml:space="preserve">
+    <value>إذا كنت لا تمتلك مفاتيح التشفير وفك التشفير</value>
+  </data>
+  <data name="RSA_Alert_URL_Text" xml:space="preserve">
+    <value>أنقر هنا لإنشاء زوج مفاتيح تشفير</value>
+  </data>
+  <data name="RSA_Cipher" xml:space="preserve">
+    <value>النص المراد فك تشفيره</value>
+  </data>
+  <data name="RSA_CipherResult" xml:space="preserve">
+    <value>نتيجة التشفير</value>
+  </data>
+  <data name="RSA_PrivateKey" xml:space="preserve">
+    <value>مفتاح التشفير الخاص</value>
+  </data>
+  <data name="RSA_PublicKey" xml:space="preserve">
+    <value>مفتاح التشفير العام</value>
+  </data>
+  <data name="RSA_Text" xml:space="preserve">
+    <value>النص المراد تشفيره</value>
+  </data>
+  <data name="RSA_TextResult" xml:space="preserve">
+    <value>نتيجة فك التشفير</value>
   </data>
 </root>

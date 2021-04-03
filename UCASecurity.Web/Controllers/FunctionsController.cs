@@ -8,8 +8,9 @@ using UCASecurity.Web.ViewModels;
 
 namespace UCASecurity.Web.Controllers
 {
-    public class APIController : Controller
+    public class FunctionsController : Controller
     {
+        [Route("/api/hash")]
         public IActionResult Hash(string text)
         {
             return Json(new HashFunctionsResultViewModel()
@@ -22,6 +23,10 @@ namespace UCASecurity.Web.Controllers
                 Tiger = new Tiger().Hash(text),
                 Whiirlpool = new Whirlpool().Hash(text)
             });
+        }
+        public IActionResult Hash()
+        {
+            return View();
         }
     }
 }
