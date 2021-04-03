@@ -120,6 +120,12 @@
   <data name="Arabic" xml:space="preserve">
     <value>Arabic</value>
   </data>
+  <data name="Functions_Hash_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Functions_Hash_Title" xml:space="preserve">
+    <value>Hash Functions</value>
+  </data>
   <data name="Hash_MD5" xml:space="preserve">
     <value>MD5 Hash</value>
   </data>
@@ -143,9 +149,6 @@
   </data>
   <data name="Hash_Whirlpool" xml:space="preserve">
     <value>Whirlpool Hash</value>
-  </data>
-  <data name="Home_Hash_Title" xml:space="preserve">
-    <value>Hash Functions</value>
   </data>
   <data name="Home_Index_Title" xml:space="preserve">
     <value>Home Page</value>

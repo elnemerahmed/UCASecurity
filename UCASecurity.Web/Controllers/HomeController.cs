@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using UCASecurity.Encryption.Algorithms;
 
 namespace UCASecurity.Web.Controllers
 {
@@ -22,11 +23,7 @@ namespace UCASecurity.Web.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-        public IActionResult Hash()
-        {
-            return View();
-        }
+        }       
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(

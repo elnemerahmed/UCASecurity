@@ -1,7 +1,7 @@
 ﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
 
 @{
-    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Hash_Title");
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Functions_Hash_Title");
 }
 
 <div class="container">
@@ -50,10 +50,11 @@
         function fill(id, data) {
             let status = parseInt(data.status);
             let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Functions_Hash_Error")";
             if (status == 200)
                 $("#" + id).val(value);
             else
-                $("#" + id).val('');
+                $("#" + id).val(error);
         }
 
         window.onload = function () {
