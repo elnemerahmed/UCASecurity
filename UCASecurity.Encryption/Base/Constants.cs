@@ -8,6 +8,9 @@ namespace UCASecurity.Encryption.Base
 {
     public static class Constants
     {
-        public static string SampleInput = "Hello World";
+        public static string Input = "Hello World";
+        public static string IV = "10111213141516";
+        public static int CEASER_KEY = 5;
+        public static string AES_KEY = "AXe8YwuIn1zxt3FPWTZFlAa14EHdPAdN9FaZ9RQWihc=";
     }
 }

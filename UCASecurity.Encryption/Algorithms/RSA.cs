@@ -130,7 +130,7 @@ namespace UCASecurity.Encryption.Algorithms
                 if (privateKeyResult.status == StatusCode.Error)
                     throw new Exception();
 
-                var cipherResult = Encrypt(Constants.SampleInput, publicKeyResult.payload);
+                var cipherResult = Encrypt(Constants.Input, publicKeyResult.payload);
                 if (cipherResult.status == StatusCode.Error)
                     throw new Exception();
 
@@ -138,7 +138,7 @@ namespace UCASecurity.Encryption.Algorithms
                 if (textResult.status == StatusCode.Error)
                     throw new Exception();
 
-                return textResult.payload.Equals(Constants.SampleInput);
+                return textResult.payload.Equals(Constants.Input);
             }
             catch (Exception)
             {

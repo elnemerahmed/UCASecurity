@@ -1,0 +1,98 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Algorithms_AES_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form>
+                <div class="mb-3">
+                    <label for="algorithm">@SharedLocalizer.GetLocalizedHtmlString("AES_Algorithm")</label>
+                    <select id="algorithm" class="form-control">
+                        <option selected disabled value="">@SharedLocalizer.GetLocalizedHtmlString("AES_Select_Algorithm")</option>
+                        <option value="CBC">@SharedLocalizer.GetLocalizedHtmlString("CBC")</option>
+                        <option value="ECB">@SharedLocalizer.GetLocalizedHtmlString("ECB")</option>
+                        <option value="AES/OFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/OFB/NoPadding")</option>
+                        <option value="AES/CFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CFB/NoPadding")</option>
+                        <option value="AES/EAX/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/EAX/NoPadding")</option>
+                        <option value="AES/GCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/GCM/NoPadding")</option>
+                        <option value="AES/CCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CCM/NoPadding")</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("AES_Key")</label>
+                    <input id="key" type="text" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("AES_Text")</label>
+                    <textarea id="text" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("AES_Result")</label>
+                    <textarea id="result_encryption" class="form-control" readonly></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("AES_Cipher")</label>
+                    <textarea id="cipher" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("AES_Result")</label>
+                    <textarea id="result_decryption" class="form-control" readonly></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function fill(id, data) {
+            let status = parseInt(data.status);
+            let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
+            if (status == 200)
+                $("#" + id).val(value);
+            else
+                $("#" + id).val(error);
+        }
+
+        window.onload = function () {
+            $("#text").on('change keyup paste', function () {
+                let algorithm = $('#algorithm').val();
+                let key = $('#key').val();
+                if (key === '' || key === undefined || algorithm === '' || algorithm === undefined)
+                    return;
+
+                let text = $('#text').val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/aes/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text) + '&algorithm=' + encodeURIComponent(algorithm),
+                    success: function (data) {
+                        fill('result_encryption', JSON.parse(data));
+                    },
+                    dataType: "HTML"
+                });
+            });
+
+            $("#cipher").on('change keyup paste', function () {
+                let algorithm = $('#algorithm').val();
+                let key = $('#key').val();
+                if (key === '' || key === undefined || algorithm === '' || algorithm === undefined)
+                    return;
+
+                let cipher = $('#cipher').val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/aes/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher) + '&algorithm=' + encodeURIComponent(algorithm),
+                    success: function (data) {
+                        fill('result_decryption', JSON.parse(data));
+                    },
+                    dataType: "HTML"
+                });
+            });
+        }
+    </script>
+}

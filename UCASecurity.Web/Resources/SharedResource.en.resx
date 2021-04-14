@@ -117,14 +117,83 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AES/CCM/NoPadding" xml:space="preserve">
+    <value>CCM with no padding</value>
+  </data>
+  <data name="AES/CFB/NoPadding" xml:space="preserve">
+    <value>CFB with no padding</value>
+  </data>
+  <data name="AES/EAX/NoPadding" xml:space="preserve">
+    <value>EAX with no padding</value>
+  </data>
+  <data name="AES/GCM/NoPadding" xml:space="preserve">
+    <value>GCM with no padding</value>
+  </data>
+  <data name="AES/OFB/NoPadding" xml:space="preserve">
+    <value>OFB with no padding</value>
+  </data>
+  <data name="AES_Algorithm" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="AES_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="AES_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="AES_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="AES_Select_Algorithm" xml:space="preserve">
+    <value>Please select an algorithm mode</value>
+  </data>
+  <data name="AES_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Algorithms_AES_Title" xml:space="preserve">
+    <value>AES</value>
+  </data>
+  <data name="Algorithms_BlowFish_Title" xml:space="preserve">
+    <value>BlowFish</value>
+  </data>
+  <data name="Algorithms_Caesar_Title" xml:space="preserve">
+    <value>Caesar Cipher</value>
+  </data>
   <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
     <value>Generate RSA Key Pair</value>
   </data>
   <data name="Algorithms_RSA_Title" xml:space="preserve">
     <value>RSA Algorithm</value>
   </data>
+  <data name="Algorithms_Vigenare_Title" xml:space="preserve">
+    <value>Vigenare</value>
+  </data>
   <data name="Arabic" xml:space="preserve">
     <value>Arabic</value>
+  </data>
+  <data name="BlowFish_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="BlowFish_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="BlowFish_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="BlowFish_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Caesar_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="Caesar_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="Caesar_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Caesar_Text" xml:space="preserve">
+    <value>Text</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
@@ -174,6 +243,51 @@
   <data name="Layout_Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Math_GCD_Input_1" xml:space="preserve">
+    <value>First Number</value>
+  </data>
+  <data name="Math_GCD_Input_2" xml:space="preserve">
+    <value>Second Number</value>
+  </data>
+  <data name="Math_GCD_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Math_GCD_Title" xml:space="preserve">
+    <value>GCD</value>
+  </data>
+  <data name="Math_PasswordStrength_Input" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Math_PasswordStrength_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Math_PasswordStrength_Title" xml:space="preserve">
+    <value>Password Strength Calculator</value>
+  </data>
+  <data name="Math_PrimeFactorization_Title" xml:space="preserve">
+    <value>Prime Factorization</value>
+  </data>
+  <data name="Math_PrimeTest_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="Math_PrimeTest_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Math_PrimeTest_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Math_PrimeTest_Title" xml:space="preserve">
+    <value>Prime Test</value>
+  </data>
+  <data name="Math_PrimeTest_True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="PrimeFactorization_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="PrimeFactorization_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
   <data name="RSA_Alert_Text" xml:space="preserve">
     <value>If don't have keys yet</value>
   </data>
@@ -197,5 +311,17 @@
   </data>
   <data name="RSA_TextResult" xml:space="preserve">
     <value>Result</value>
+  </data>
+  <data name="Vigenare_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="Vigenare_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="Vigenare_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Vigenare_Text" xml:space="preserve">
+    <value>Text</value>
   </data>
 </root>

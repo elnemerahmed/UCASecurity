@@ -117,11 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AES/CCM/NoPadding" xml:space="preserve">
+    <value>CCM بدون إضافات</value>
+  </data>
+  <data name="AES/CFB/NoPadding" xml:space="preserve">
+    <value>CFB بدون إضافات</value>
+  </data>
+  <data name="AES/EAX/NoPadding" xml:space="preserve">
+    <value>EAX بدون إضافات</value>
+  </data>
+  <data name="AES/GCM/NoPadding" xml:space="preserve">
+    <value>GCM بدون إضافات</value>
+  </data>
+  <data name="AES/OFB/NoPadding" xml:space="preserve">
+    <value>OFB بدون إضافات</value>
+  </data>
+  <data name="AES_Algorithm" xml:space="preserve">
+    <value>نوع الخوارزمية</value>
+  </data>
+  <data name="AES_Cipher" xml:space="preserve">
+    <value>الشيفرة</value>
+  </data>
+  <data name="AES_Key" xml:space="preserve">
+    <value>مفتاح التشفير / فك التشفير</value>
+  </data>
+  <data name="AES_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="AES_Select_Algorithm" xml:space="preserve">
+    <value>من فضلك إختر نوع الخوارزمية</value>
+  </data>
+  <data name="AES_Text" xml:space="preserve">
+    <value>النص</value>
+  </data>
+  <data name="Algorithms_AES_Title" xml:space="preserve">
+    <value>خوارزمية AES</value>
+  </data>
+  <data name="Algorithms_BlowFish_Title" xml:space="preserve">
+    <value>خوارزمية السمكة المنتفخة</value>
+  </data>
+  <data name="Algorithms_Caesar_Title" xml:space="preserve">
+    <value>شيفرة القيصر</value>
+  </data>
   <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
     <value>توليد مفاتيح تشفير جديدة لخوارزمية RSA</value>
   </data>
   <data name="Algorithms_RSA_Title" xml:space="preserve">
     <value>خوارزمية RSA</value>
+  </data>
+  <data name="Algorithms_Vigenare_Title" xml:space="preserve">
+    <value>خوارزمية فيجينير</value>
+  </data>
+  <data name="BlowFish_Cipher" xml:space="preserve">
+    <value>الشيفرة</value>
+  </data>
+  <data name="BlowFish_Key" xml:space="preserve">
+    <value>مفتاح التشفير / فك التشفير</value>
+  </data>
+  <data name="BlowFish_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="BlowFish_Text" xml:space="preserve">
+    <value>النص</value>
+  </data>
+  <data name="Caesar_Cipher" xml:space="preserve">
+    <value>الشيفرة</value>
+  </data>
+  <data name="Caesar_Key" xml:space="preserve">
+    <value>مفتاح التشفير / فك التشفير</value>
+  </data>
+  <data name="Caesar_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Caesar_Text" xml:space="preserve">
+    <value>النص</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>الإنجليزية</value>
@@ -174,6 +243,51 @@
   <data name="Layout_Home" xml:space="preserve">
     <value>الرئيسية</value>
   </data>
+  <data name="Math_GCD_Input_1" xml:space="preserve">
+    <value>العدد الأول</value>
+  </data>
+  <data name="Math_GCD_Input_2" xml:space="preserve">
+    <value>العدد الثاني</value>
+  </data>
+  <data name="Math_GCD_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Math_GCD_Title" xml:space="preserve">
+    <value>العامل المشترك الأكبر</value>
+  </data>
+  <data name="Math_PasswordStrength_Input" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="Math_PasswordStrength_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Math_PasswordStrength_Title" xml:space="preserve">
+    <value>حاسبة قوة كلمات المرور</value>
+  </data>
+  <data name="Math_PrimeFactorization_Title" xml:space="preserve">
+    <value>العوامل الرئيسية</value>
+  </data>
+  <data name="Math_PrimeTest_False" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Math_PrimeTest_Input" xml:space="preserve">
+    <value>الرقم</value>
+  </data>
+  <data name="Math_PrimeTest_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Math_PrimeTest_Title" xml:space="preserve">
+    <value>فحص العدد الأولي</value>
+  </data>
+  <data name="Math_PrimeTest_True" xml:space="preserve">
+    <value>صحيح</value>
+  </data>
+  <data name="PrimeFactorization_Input" xml:space="preserve">
+    <value>الرقم</value>
+  </data>
+  <data name="PrimeFactorization_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
   <data name="RSA_Alert_Text" xml:space="preserve">
     <value>إذا كنت لا تمتلك مفاتيح التشفير وفك التشفير</value>
   </data>
@@ -197,5 +311,17 @@
   </data>
   <data name="RSA_TextResult" xml:space="preserve">
     <value>نتيجة فك التشفير</value>
+  </data>
+  <data name="Vigenare_Cipher" xml:space="preserve">
+    <value>الشيفرة</value>
+  </data>
+  <data name="Vigenare_Key" xml:space="preserve">
+    <value>مفتاح التشفير / فك التشفير</value>
+  </data>
+  <data name="Vigenare_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Vigenare_Text" xml:space="preserve">
+    <value>النص</value>
   </data>
 </root>
