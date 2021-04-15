@@ -1,10 +1,7 @@
-﻿using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using UCASecurity.Encryption.Base;
@@ -13,119 +10,98 @@ namespace UCASecurity.Encryption.Algorithms
 {
     public class AES : Algorithm<string, string, string>
     {
-        public string AlgorithmName { get; set; }
-        public AES(string AlgorithmName)
+        private CipherMode Mode { get; set; }
+        private PaddingMode PaddingMode { get; set; }
+        
+        public AES(string AlgorithmName, string PaddingModeName)
         {
-			this.AlgorithmName = AlgorithmName;
-		}
-		private  Result<ParametersWithIV> SetUpKey(string key)
-		{
-			try
-			{
+            Mode = AlgorithmName.Equals("CBC") ? CipherMode.CBC : CipherMode.ECB;
+            if (PaddingModeName.Equals("PKCS7"))
+                PaddingMode = PaddingMode.PKCS7;
+            else if(PaddingModeName.Equals("Zeros"))
+                PaddingMode = PaddingMode.Zeros;
+            else if(PaddingModeName.Equals("ISO10126"))
+                PaddingMode = PaddingMode.ISO10126;
+        }
+        public override Result<string> Encrypt(string text, string key)
+        {
+            try
+            {
+                var plainBytes = Encoding.UTF8.GetBytes(text);
+                string encryptedInput = Convert.ToBase64String(EncryptBytes(plainBytes, getRijndaelManaged(key)));
+                return new Result<string>() { status = StatusCode.OK, payload = encryptedInput };
+            }
+            catch (Exception e)
+            {
+                return new Result<string>() { status = StatusCode.Error, payload = string.Empty };
+            }
+        }
+        public override Result<string> Decrypt(string cipher, string key)
+        {
+            try
+            {
+                var encryptedBytes = Convert.FromBase64String(cipher);
+                string decryptedInput = Encoding.UTF8.GetString(DecryptBytes(encryptedBytes, getRijndaelManaged(key)));
+                return new Result<string>() { status = StatusCode.OK, payload = decryptedInput };
+            }
+            catch (Exception e)
+            {
+                return new Result<string>()
+                {
+                    status = StatusCode.Error,
+                    payload = string.Empty
+                };
+            }
+        }
+        public override bool Health()
+        {
+            try
+            {
+                var cipherResult = Encrypt(Constants.Input, Constants.AES_KEY);
+                if (cipherResult.status == StatusCode.Error)
+                {
+                    throw new Exception();
+                }
 
-				byte[] inputKey = Convert.FromBase64String(key);
-				byte[] iv = Hex.Decode(Constants.IV);
-				KeyParameter keyParam = ParameterUtilities.CreateKeyParameter("AES", inputKey);
+                var textResult = Decrypt(cipherResult.payload, Constants.AES_KEY);
+                if (textResult.status == StatusCode.Error)
+                {
+                    throw new Exception();
+                }
+                return textResult.payload.Equals(Constants.Input);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        private RijndaelManaged getRijndaelManaged(String secretKey)
+        {
+            var keyBytes = new byte[16];
+            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
+            Array.Copy(secretKeyBytes, keyBytes, Math.Min(keyBytes.Length, secretKeyBytes.Length));
+            return new RijndaelManaged
+            {
+                Mode = Mode,
+                Padding = PaddingMode.ANSIX923,
+                KeySize = 128,
+                BlockSize = 128,
+                Key = keyBytes,
+                IV = keyBytes
+            };
+        }
 
-				ParametersWithIV keyParamWithIV = new ParametersWithIV(keyParam, iv);
+        private byte[] EncryptBytes(byte[] plainBytes, RijndaelManaged rijndaelManaged)
+        {
+            return rijndaelManaged.CreateEncryptor()
+                .TransformFinalBlock(plainBytes, 0, plainBytes.Length);
+        }
 
-				return new Result<ParametersWithIV>() { status = StatusCode.OK, payload = keyParamWithIV };
-			}
-			catch (Exception)
-			{
-				return new Result<ParametersWithIV>() { status = StatusCode.Error, payload = null };
-			}
-		}
-		public override Result<string> Decrypt(string cipher, string key)
-		{
-			try
-			{
-				var keyParamWithIv = SetUpKey(key);
+        private byte[] DecryptBytes(byte[] encryptedData, RijndaelManaged rijndaelManaged)
+        {
+            return rijndaelManaged.CreateDecryptor()
+                .TransformFinalBlock(encryptedData, 0, encryptedData.Length);
+        }
 
-				byte[] C = Convert.FromBase64String(cipher);
-				IBufferedCipher outCipher = CipherUtilities.GetCipher(AlgorithmName);
-
-				outCipher.Init(false, keyParamWithIv.payload);
-
-				byte[] dec = outCipher.DoFinal(C);
-
-				string decryptedInput = Convert.ToBase64String(dec);
-
-				return new Result<string>() { status = StatusCode.OK, payload = decryptedInput };
-			}
-			catch (Exception e)
-			{
-				return new Result<string>()
-				{
-					status = StatusCode.Error,
-					payload = string.Empty
-				};
-			}
-		}
-		public override Result<string> Encrypt(string text, string key)
-		{
-			try
-			{
-				var keyParamWithIv = SetUpKey(key);
-
-				byte[] P = Convert.FromBase64String(text);
-				IBufferedCipher inCipher = CipherUtilities.GetCipher(AlgorithmName);
-
-				inCipher.Init(true, keyParamWithIv.payload);
-
-				byte[] enc = inCipher.DoFinal(P);
-
-				string encryptedInput = Convert.ToBase64String(enc);
-				return new Result<string>() { status = StatusCode.OK, payload = encryptedInput };
-
-			}
-			catch (Exception e)
-			{
-				return new Result<string>() { status = StatusCode.Error, payload = string.Empty };
-			}
-		}
-		public override bool Health()
-		{
-			try
-			{
-				var cipherResult = Encrypt(Constants.Input, Constants.Input);
-				if (cipherResult.status == StatusCode.Error)
-				{
-					throw new Exception();
-				}
-
-				var textResult = Decrypt(cipherResult.payload, Constants.Input);
-				if (textResult.status == StatusCode.Error)
-				{
-					throw new Exception();
-				}
-				return textResult.payload.Equals(Constants.Input);
-			}
-			catch (Exception)
-			{
-				return false;
-			}
-		}
-	}
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-This Code is vaild for :: 
-
-"AES/OFB/NoPadding",
-"AES/CFB/NoPadding",
-"AES/EAX/NoPadding"
-"AES/GCM/NoPadding"
-"AES/CCM/NoPadding"
-*/

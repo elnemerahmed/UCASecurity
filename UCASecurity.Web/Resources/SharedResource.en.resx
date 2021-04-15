@@ -117,29 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AES/CCM/NoPadding" xml:space="preserve">
-    <value>CCM with no padding</value>
-  </data>
-  <data name="AES/CFB/NoPadding" xml:space="preserve">
-    <value>CFB with no padding</value>
-  </data>
-  <data name="AES/EAX/NoPadding" xml:space="preserve">
-    <value>EAX with no padding</value>
-  </data>
-  <data name="AES/GCM/NoPadding" xml:space="preserve">
-    <value>GCM with no padding</value>
-  </data>
-  <data name="AES/OFB/NoPadding" xml:space="preserve">
-    <value>OFB with no padding</value>
-  </data>
   <data name="AES_Algorithm" xml:space="preserve">
     <value>Mode</value>
+  </data>
+  <data name="AES_CBC" xml:space="preserve">
+    <value>Cipher block chaining</value>
   </data>
   <data name="AES_Cipher" xml:space="preserve">
     <value>Cipher</value>
   </data>
+  <data name="AES_ECB" xml:space="preserve">
+    <value>Electronic codebook</value>
+  </data>
+  <data name="AES_ISO10126" xml:space="preserve">
+    <value>ISO10126</value>
+  </data>
   <data name="AES_Key" xml:space="preserve">
     <value>Key</value>
+  </data>
+  <data name="AES_Padding_Mode" xml:space="preserve">
+    <value>Padding Mode</value>
+  </data>
+  <data name="AES_PKCS7" xml:space="preserve">
+    <value>PKCS7</value>
   </data>
   <data name="AES_Result" xml:space="preserve">
     <value>Result</value>
@@ -147,8 +147,14 @@
   <data name="AES_Select_Algorithm" xml:space="preserve">
     <value>Please select an algorithm mode</value>
   </data>
+  <data name="AES_Select_Padding_Mode" xml:space="preserve">
+    <value>Please select a padding mode</value>
+  </data>
   <data name="AES_Text" xml:space="preserve">
     <value>Text</value>
+  </data>
+  <data name="AES_Zeros" xml:space="preserve">
+    <value>Zeros</value>
   </data>
   <data name="Algorithms_AES_Title" xml:space="preserve">
     <value>AES</value>
@@ -161,6 +167,12 @@
   </data>
   <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
     <value>Generate RSA Key Pair</value>
+  </data>
+  <data name="Algorithms_PlayFair_Title" xml:space="preserve">
+    <value>Play Fair</value>
+  </data>
+  <data name="Algorithms_RailFence_Title" xml:space="preserve">
+    <value>Rail Fence</value>
   </data>
   <data name="Algorithms_RSA_Title" xml:space="preserve">
     <value>RSA Algorithm</value>
@@ -225,6 +237,12 @@
   <data name="Hash_Whirlpool" xml:space="preserve">
     <value>Whirlpool Hash</value>
   </data>
+  <data name="Home_Hero_Description" xml:space="preserve">
+    <value>A new generation of cloud enryption online tool for educational purpuses, developed as a graduation project for Cryptography II Course.</value>
+  </data>
+  <data name="Home_Hero_Title" xml:space="preserve">
+    <value>UCASecurity online tool</value>
+  </data>
   <data name="Home_Index_Title" xml:space="preserve">
     <value>Home Page</value>
   </data>
@@ -282,11 +300,35 @@
   <data name="Math_PrimeTest_True" xml:space="preserve">
     <value>True</value>
   </data>
+  <data name="PlayFair_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="PlayFair_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="PlayFair_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="PlayFair_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
   <data name="PrimeFactorization_Input" xml:space="preserve">
     <value>Input</value>
   </data>
   <data name="PrimeFactorization_Result" xml:space="preserve">
     <value>Result</value>
+  </data>
+  <data name="RailFence_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="RailFence_Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="RailFence_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="RailFence_Text" xml:space="preserve">
+    <value>Text</value>
   </data>
   <data name="RSA_Alert_Text" xml:space="preserve">
     <value>If don't have keys yet</value>

@@ -12,13 +12,17 @@
                     <label for="algorithm">@SharedLocalizer.GetLocalizedHtmlString("AES_Algorithm")</label>
                     <select id="algorithm" class="form-control">
                         <option selected disabled value="">@SharedLocalizer.GetLocalizedHtmlString("AES_Select_Algorithm")</option>
-                        <option value="CBC">@SharedLocalizer.GetLocalizedHtmlString("CBC")</option>
-                        <option value="ECB">@SharedLocalizer.GetLocalizedHtmlString("ECB")</option>
-                        <option value="AES/OFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/OFB/NoPadding")</option>
-                        <option value="AES/CFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CFB/NoPadding")</option>
-                        <option value="AES/EAX/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/EAX/NoPadding")</option>
-                        <option value="AES/GCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/GCM/NoPadding")</option>
-                        <option value="AES/CCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CCM/NoPadding")</option>
+                        <option value="CBC">@SharedLocalizer.GetLocalizedHtmlString("AES_CBC")</option>
+                        <option value="ECB">@SharedLocalizer.GetLocalizedHtmlString("AES_ECB")</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="padding">@SharedLocalizer.GetLocalizedHtmlString("AES_Padding_Mode")</label>
+                    <select id="padding" class="form-control">
+                        <option selected disabled value="">@SharedLocalizer.GetLocalizedHtmlString("AES_Select_Padding_Mode")</option>
+                        <option value="PKCS7">@SharedLocalizer.GetLocalizedHtmlString("AES_PKCS7")</option>
+                        <option value="Zeros">@SharedLocalizer.GetLocalizedHtmlString("AES_Zeros")</option>
+                        <option value="ISO10126">@SharedLocalizer.GetLocalizedHtmlString("AES_ISO10126")</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -63,13 +67,14 @@
             $("#text").on('change keyup paste', function () {
                 let algorithm = $('#algorithm').val();
                 let key = $('#key').val();
-                if (key === '' || key === undefined || algorithm === '' || algorithm === undefined)
+                let padding = $('#padding').val();
+                if (key === '' || key === undefined || algorithm === '' || algorithm === undefined || padding === '' || padding === undefined)
                     return;
 
                 let text = $('#text').val();
                 $.ajax({
                     type: "get",
-                    url: '/api/aes/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text) + '&algorithm=' + encodeURIComponent(algorithm),
+                    url: '/api/aes/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text) + '&algorithm=' + encodeURIComponent(algorithm) + '&padding=' + encodeURIComponent(padding),
                     success: function (data) {
                         fill('result_encryption', JSON.parse(data));
                     },
@@ -79,14 +84,15 @@
 
             $("#cipher").on('change keyup paste', function () {
                 let algorithm = $('#algorithm').val();
+                let padding = $('#padding').val();
                 let key = $('#key').val();
-                if (key === '' || key === undefined || algorithm === '' || algorithm === undefined)
+                if (key === '' || key === undefined || algorithm === '' || algorithm === undefined || padding === '' || padding === undefined)
                     return;
 
                 let cipher = $('#cipher').val();
                 $.ajax({
                     type: "get",
-                    url: '/api/aes/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher) + '&algorithm=' + encodeURIComponent(algorithm),
+                    url: '/api/aes/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher) + '&algorithm=' + encodeURIComponent(algorithm) + '&padding=' + encodeURIComponent(padding),
                     success: function (data) {
                         fill('result_decryption', JSON.parse(data));
                     },

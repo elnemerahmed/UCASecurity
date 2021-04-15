@@ -99,22 +99,57 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/aes/encrypt")]
-        public IActionResult AESEncrypt(string key, string text, string algorithm)
+        public IActionResult AESEncrypt(string key, string text, string algorithm, string padding)
         {
-            dynamic aes = new AES(algorithm);
-            if (algorithm.Equals("CBC") || algorithm.Equals("ECB"))
-                aes = new AES2(algorithm);
+            AES aes = new AES(algorithm, padding);
             var result = aes.Encrypt(text, key);
             return Json(result);
         }
 
         [Route("/api/aes/decrypt")]
-        public IActionResult AESDecrypt(string key, string cipher, string algorithm)
+        public IActionResult AESDecrypt(string key, string cipher, string algorithm, string padding)
         {
-            dynamic aes = new AES(algorithm);
-            if (algorithm.Equals("CBC") || algorithm.Equals("ECB"))
-                aes = new AES2(algorithm);
+            AES aes = new AES(algorithm, padding);
             var result = aes.Decrypt(cipher, key);
+            return Json(result);
+        }
+        public IActionResult RailFence()
+        {
+            return View();
+        }
+        [Route("/api/railfence/encrypt")]
+        public IActionResult RailFenceEncrypt(string key, string text)
+        {
+            RailFence railFence = new RailFence();
+            var result = railFence.Encrypt(text, key);
+            return Json(result);
+        }
+
+        [Route("/api/railfence/decrypt")]
+        public IActionResult RailFenceDecrypt(string key, string cipher)
+        {
+            RailFence railFence = new RailFence();
+            var result = railFence.Decrypt(cipher, key);
+            return Json(result);
+        }
+        public IActionResult PlayFair()
+        {
+            return View();
+        }
+
+        [Route("/api/playfair/encrypt")]
+        public IActionResult PlayFairEncrypt(string key, string text)
+        {
+            PlayFair playFair = new PlayFair();
+            var result = playFair.Encrypt(text, key);
+            return Json(result);
+        }
+
+        [Route("/api/playfair/decrypt")]
+        public IActionResult PlayFairDecrypt(string key, string cipher)
+        {
+            PlayFair playFair = new PlayFair();
+            var result = playFair.Decrypt(cipher, key);
             return Json(result);
         }
     }
