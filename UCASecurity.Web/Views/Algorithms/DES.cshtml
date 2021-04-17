@@ -18,11 +18,6 @@
                         <option value="ECB/PKCS7">@SharedLocalizer.GetLocalizedHtmlString("ECB/PKCS7")</option>
                         <option value="ECB/Zeros">@SharedLocalizer.GetLocalizedHtmlString("ECB/Zeros")</option>
                         <option value="ECB/ISO10126">@SharedLocalizer.GetLocalizedHtmlString("ECB/ISO10126")</option>
-                        <option value="AES/OFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/OFB/NoPadding")</option>
-                        <option value="AES/CFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CFB/NoPadding")</option>
-                        <option value="AES/EAX/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/EAX/NoPadding")</option>
-                        <option value="AES/GCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/GCM/NoPadding")</option>
-                        <option value="AES/CCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CCM/NoPadding")</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -52,15 +47,15 @@
 
 
 @section Scripts {
-    <script charset="utf-8">
+    <script>
         function fill(id, data) {
             let status = parseInt(data.status);
             let value = data.payload;
-            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error").ToString()";
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
             if (status == 200)
                 $("#" + id).val(value);
             else
-                $("#" + id).html(error);
+                $("#" + id).val(error);
         }
 
         window.onload = function () {

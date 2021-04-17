@@ -1,19 +1,102 @@
 ﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
 
 @{
+    List<ItemViewModel> Classic = ViewBag.Classic;
+    List<ItemViewModel> Symmetric = ViewBag.Symmetric;
+    List<ItemViewModel> Asymmetric = ViewBag.Asymmetric;
+    List<ItemViewModel> Math = ViewBag.Math;
+    List<ItemViewModel> Other = ViewBag.Other;
+
     ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Index_Title");
 }
 
-<div class="container">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+<div class="container pt-5" style=" min-height: 85vh !important; ">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5 w-100">
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="~/images/hero.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="~/images/hero.gif" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">@SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Title")</h1>
             <p class="lead">
                 @SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Description")
             </p>
+        </div>
+    </div>
+</div>
+<div id="team" class="blue text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col py-5 text-center">
+                <h1>من نحن ؟</h1>
+                <span>تعرف على فريق العمل</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12 col-md-4 col-sm-6">
+            <img class="w-100" src="~/images/hero.gif" alt="Alternate Text" />
+        </div>
+        <div class="col-12 col-md-4 col-sm-6">
+            <img class="w-100" src="~/images/hero.gif" alt="Alternate Text" />
+        </div>
+        <div class="col-12 col-md-4 col-sm-6">
+            <img class="w-100" src="~/images/hero.gif" alt="Alternate Text" />
+        </div>
+    </div>
+</div>
+
+<div id="features" class="white">
+    <div class="container pt-5 pb-5">
+        <h4 class="pb-3">أدوات التشفير</h4>
+        <div class="row">
+            @foreach (var algorithm in Classic)
+            {
+                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+        <h4 class="pb-3 pt-2">أدوات التشفير</h4>
+        <div class="row">
+            @foreach (var algorithm in Classic)
+            {
+                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+        <h4 class="pb-3 pt-2">أدوات التشفير</h4>
+        <div class="row">
+            @foreach (var algorithm in Symmetric)
+            {
+                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+        <h4 class="pb-3 pt-2">أدوات التشفير</h4>
+        <div class="row">
+            @foreach (var algorithm in Asymmetric)
+            {
+                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+        <h4 class="pb-3 pt-2">أدوات التشفير</h4>
+        <div class="row">
+            @foreach (var algorithm in Math)
+            {
+                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+        <h4 class="pb-3 pt-2">أدوات التشفير</h4>
+        <div class="row">
+            @foreach (var algorithm in Other)
+            {
+                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
         </div>
     </div>
 </div>

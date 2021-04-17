@@ -11,7 +11,7 @@ namespace UCASecurity.Web.Controllers
     public class FunctionsController : Controller
     {
         [Route("/api/hash")]
-        public IActionResult Hash(string text)
+        public IActionResult HashAPI(string text)
         {
             return Json(new HashFunctionsResultViewModel()
             {

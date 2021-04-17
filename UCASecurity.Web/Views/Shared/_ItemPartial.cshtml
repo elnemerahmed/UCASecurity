@@ -1,0 +1,21 @@
+﻿@model ItemViewModel
+
+<div class="col-12 col-sm-6 col-lg-4">
+    <div class="item d-flex flex-row justify-content-between white mb-3 p-3 rounded-item shadow-sm px-4">
+        <div class="align-self-center">
+            <a asp-controller="@Model.Controller" asp-action="@Model.Action">
+                @Model.Title
+            </a>
+        </div>
+        <div>
+            @if (Model.Healthy)
+            {
+                <img class="healthy" src="~/images/yes.png" alt="Healthy" />
+            }
+            else
+            {
+                <img class="healthy" src="~/images/no.png" alt="Not Healthy" />
+            }
+        </div>
+    </div>
+</div>

@@ -203,7 +203,7 @@ namespace UCASecurity.Encryption.Algorithms
 				{
 					throw new Exception();
 				}
-				return textResult.payload.Equals(Constants.Input);
+				return textResult.payload.TrimEnd(new Char[] { 'X' }).Equals(Constants.Input);
 			}
 			catch (Exception)
 			{

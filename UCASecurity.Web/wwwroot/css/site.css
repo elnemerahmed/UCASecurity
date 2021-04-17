@@ -7,7 +7,7 @@
 }
 
 .white {
-    background: #ffffff;
+    background: #ffffff ;
 }
 
 html {
@@ -27,6 +27,22 @@ body {
     line-height: 60px;
 }
 
+.healthy {
+    width: 25px;
+}
+
+.item a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rounded-item {
+    border-radius: 50px !important;
+}
+
+.blue {
+    background-color: blue;
+}
 
 @media (min-width: 768px) {
     .brand-text {

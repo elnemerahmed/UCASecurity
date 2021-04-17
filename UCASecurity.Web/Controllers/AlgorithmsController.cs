@@ -99,18 +99,41 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/aes/encrypt")]
-        public IActionResult AESEncrypt(string key, string text, string algorithm, string padding)
+        public IActionResult AESEncrypt(string key, string text, string mode)
         {
-            AES aes = new AES(algorithm, padding);
+            AES aes = new AES(mode);
             var result = aes.Encrypt(text, key);
             return Json(result);
         }
 
         [Route("/api/aes/decrypt")]
-        public IActionResult AESDecrypt(string key, string cipher, string algorithm, string padding)
+        public IActionResult AESDecrypt(string key, string cipher, string mode)
         {
-            AES aes = new AES(algorithm, padding);
+            AES aes = new AES(mode);
             var result = aes.Decrypt(cipher, key);
+            return Json(result);
+        }
+        public IActionResult DES()
+        {
+            return View();
+        }
+        [Route("/api/des/encrypt")]
+        public IActionResult DESEncrypt(string key, string text, string mode)
+        {
+            var algorithmMode = mode.Split('/')[0];
+            var paddingMode = mode.Split('/')[0];
+            DES des = new DES(algorithmMode, paddingMode);
+            var result = des.Encrypt(text, key);
+            return Json(result);
+        }
+
+        [Route("/api/des/decrypt")]
+        public IActionResult DESDecrypt(string key, string cipher, string mode)
+        {
+            var algorithmMode = mode.Split('/')[0];
+            var paddingMode = mode.Split('/')[0];
+            DES des = new DES(algorithmMode, paddingMode);
+            var result = des.Decrypt(cipher, key);
             return Json(result);
         }
         public IActionResult RailFence()
@@ -118,7 +141,7 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/railfence/encrypt")]
-        public IActionResult RailFenceEncrypt(string key, string text)
+        public IActionResult RailFenceEncrypt(int key, string text)
         {
             RailFence railFence = new RailFence();
             var result = railFence.Encrypt(text, key);
@@ -126,7 +149,7 @@ namespace UCASecurity.Web.Controllers
         }
 
         [Route("/api/railfence/decrypt")]
-        public IActionResult RailFenceDecrypt(string key, string cipher)
+        public IActionResult RailFenceDecrypt(int key, string cipher)
         {
             RailFence railFence = new RailFence();
             var result = railFence.Decrypt(cipher, key);
@@ -150,6 +173,26 @@ namespace UCASecurity.Web.Controllers
         {
             PlayFair playFair = new PlayFair();
             var result = playFair.Decrypt(cipher, key);
+            return Json(result);
+        }
+        public IActionResult RC2()
+        {
+            return View();
+        }
+
+        [Route("/api/rc2/encrypt")]
+        public IActionResult RC2Encrypt(string key, string text)
+        {
+            RC2 rc2 = new RC2();
+            var result = rc2.Encrypt(text, key);
+            return Json(result);
+        }
+
+        [Route("/api/rc2/decrypt")]
+        public IActionResult RC2Decrypt(string key, string cipher)
+        {
+            RC2 rc2 = new RC2();
+            var result = rc2.Decrypt(cipher, key);
             return Json(result);
         }
     }

@@ -14,7 +14,7 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/primefactorization")]
-        public IActionResult PrimeFactorization(long number)
+        public IActionResult PrimeFactorizationAPI(long number)
         {
             var result = Prime.GetFactors(number);
             return Json(result);
@@ -24,7 +24,7 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/primetest")]
-        public IActionResult PrimeTest(long number)
+        public IActionResult PrimeTestAPI(long number)
         {
             var result = Prime.isPrime(number);
             return Json(result);
@@ -34,7 +34,7 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/gcd")]
-        public IActionResult GCD(long a, long b)
+        public IActionResult GCDAPI(long a, long b)
         {
             var result = Prime.GCD(a, b);
             return Json(result);
@@ -44,7 +44,7 @@ namespace UCASecurity.Web.Controllers
             return View();
         }
         [Route("/api/passwordstrength")]
-        public IActionResult PasswordStrength(string password)
+        public IActionResult PasswordStrengthAPI(string password)
         {
             var result = Password.Strength(password);
             return Json(result);

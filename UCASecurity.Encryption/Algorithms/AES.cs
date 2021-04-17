@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using UCASecurity.Encryption.Base;
@@ -10,98 +9,32 @@ namespace UCASecurity.Encryption.Algorithms
 {
     public class AES : Algorithm<string, string, string>
     {
-        private CipherMode Mode { get; set; }
-        private PaddingMode PaddingMode { get; set; }
-        
-        public AES(string AlgorithmName, string PaddingModeName)
+        public dynamic Algorithm { get; set; }
+        public AES(string mode)
         {
-            Mode = AlgorithmName.Equals("CBC") ? CipherMode.CBC : CipherMode.ECB;
-            if (PaddingModeName.Equals("PKCS7"))
-                PaddingMode = PaddingMode.PKCS7;
-            else if(PaddingModeName.Equals("Zeros"))
-                PaddingMode = PaddingMode.Zeros;
-            else if(PaddingModeName.Equals("ISO10126"))
-                PaddingMode = PaddingMode.ISO10126;
-        }
-        public override Result<string> Encrypt(string text, string key)
-        {
-            try
+            if (mode.StartsWith("AES"))
             {
-                var plainBytes = Encoding.UTF8.GetBytes(text);
-                string encryptedInput = Convert.ToBase64String(EncryptBytes(plainBytes, getRijndaelManaged(key)));
-                return new Result<string>() { status = StatusCode.OK, payload = encryptedInput };
-            }
-            catch (Exception e)
+                Algorithm = new AES1(mode);
+            } else
             {
-                return new Result<string>() { status = StatusCode.Error, payload = string.Empty };
+                var algorithmMode = mode.Split('/')[0];
+                var paddingMode = mode.Split('/')[0];
+                Algorithm = new AES2(algorithmMode, paddingMode);
             }
         }
         public override Result<string> Decrypt(string cipher, string key)
         {
-            try
-            {
-                var encryptedBytes = Convert.FromBase64String(cipher);
-                string decryptedInput = Encoding.UTF8.GetString(DecryptBytes(encryptedBytes, getRijndaelManaged(key)));
-                return new Result<string>() { status = StatusCode.OK, payload = decryptedInput };
-            }
-            catch (Exception e)
-            {
-                return new Result<string>()
-                {
-                    status = StatusCode.Error,
-                    payload = string.Empty
-                };
-            }
+            return Algorithm.Decrypt(cipher, key);
         }
+
+        public override Result<string> Encrypt(string text, string key)
+        {
+            return Algorithm.Encrypt(text, key);
+        }
+
         public override bool Health()
         {
-            try
-            {
-                var cipherResult = Encrypt(Constants.Input, Constants.AES_KEY);
-                if (cipherResult.status == StatusCode.Error)
-                {
-                    throw new Exception();
-                }
-
-                var textResult = Decrypt(cipherResult.payload, Constants.AES_KEY);
-                if (textResult.status == StatusCode.Error)
-                {
-                    throw new Exception();
-                }
-                return textResult.payload.Equals(Constants.Input);
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            return Algorithm.Health();
         }
-        private RijndaelManaged getRijndaelManaged(String secretKey)
-        {
-            var keyBytes = new byte[16];
-            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
-            Array.Copy(secretKeyBytes, keyBytes, Math.Min(keyBytes.Length, secretKeyBytes.Length));
-            return new RijndaelManaged
-            {
-                Mode = Mode,
-                Padding = PaddingMode.ANSIX923,
-                KeySize = 128,
-                BlockSize = 128,
-                Key = keyBytes,
-                IV = keyBytes
-            };
-        }
-
-        private byte[] EncryptBytes(byte[] plainBytes, RijndaelManaged rijndaelManaged)
-        {
-            return rijndaelManaged.CreateEncryptor()
-                .TransformFinalBlock(plainBytes, 0, plainBytes.Length);
-        }
-
-        private byte[] DecryptBytes(byte[] encryptedData, RijndaelManaged rijndaelManaged)
-        {
-            return rijndaelManaged.CreateDecryptor()
-                .TransformFinalBlock(encryptedData, 0, encryptedData.Length);
-        }
-
     }
 }

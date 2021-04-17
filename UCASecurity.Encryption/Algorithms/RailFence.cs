@@ -7,7 +7,7 @@ using UCASecurity.Encryption.Base;
 
 namespace UCASecurity.Encryption.Algorithms
 {
-    public class RailFence : Algorithm<string, string, string>
+    public class RailFence : Algorithm<string, int, string>
     {
         public static char[][] BuildCleanMatrix(int rows, int cols)
         {
@@ -52,15 +52,14 @@ namespace UCASecurity.Encryption.Algorithms
 
             return result;
         }
-        public override Result<string> Encrypt(string text, string key)
+        public override Result<string> Encrypt(string text, int key)
         {
             try
             {
 
-                int keys = Int32.Parse(key);
                 string output = string.Empty;
 
-                char[][] matrix = BuildCleanMatrix(keys, text.Length);
+                char[][] matrix = BuildCleanMatrix(key, text.Length);
 
                 int rowIncrement = 1;
                 for (int row = 0, col = 0; col < matrix[row].Length; col++)
@@ -87,14 +86,13 @@ namespace UCASecurity.Encryption.Algorithms
                 return new Result<string> { status = StatusCode.Error, payload = string.Empty };
             }
         }
-        public override Result<string> Decrypt(string cipher, string key)
+        public override Result<string> Decrypt(string cipher, int key)
         {
             try
             {
-                int keys = Int32.Parse(key);
                 string output = string.Empty;
 
-                char[][] matrix = BuildCleanMatrix(keys, cipher.Length);
+                char[][] matrix = BuildCleanMatrix(key, cipher.Length);
 
                 int rowIncrement = 1;
                 int textIdx = 0;
@@ -142,13 +140,14 @@ namespace UCASecurity.Encryption.Algorithms
         {
             try
             {
-                var cipherResult = Encrypt(Constants.Input, Constants.Input);
+                int key = 3;
+                var cipherResult = Encrypt(Constants.Input, key);
                 if (cipherResult.status == StatusCode.Error)
                 {
                     throw new Exception();
                 }
 
-                var textResult = Decrypt(cipherResult.payload, Constants.Input);
+                var textResult = Decrypt(cipherResult.payload, key);
                 if (textResult.status == StatusCode.Error)
                 {
                     throw new Exception();

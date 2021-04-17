@@ -1,7 +1,7 @@
 ﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
 
 @{
-    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Algorithms_RailFence_Title");
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Algorithms_RC2_Title");
 }
 
 <div class="container">
@@ -9,23 +9,23 @@
         <div class="col">
             <form>
                 <div class="mb-3">
-                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("RailFence_Key")</label>
-                    <input id="key" type="number" class="form-control" />
+                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("RC2_Key")</label>
+                    <input id="key" type="text" class="form-control" />
                 </div>
                 <div class="mb-3">
-                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("RailFence_Text")</label>
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("RC2_Text")</label>
                     <textarea id="text" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("RailFence_Result")</label>
+                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("RC2_Result")</label>
                     <textarea id="result_encryption" class="form-control" readonly></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("RailFence_Cipher")</label>
+                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("RC2_Cipher")</label>
                     <textarea id="cipher" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("RailFence_Result")</label>
+                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("RC2_Result")</label>
                     <textarea id="result_decryption" class="form-control" readonly></textarea>
                 </div>
             </form>
@@ -55,7 +55,7 @@
                 let text = $('#text').val();
                 $.ajax({
                     type: "get",
-                    url: '/api/railfence/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text),
+                    url: '/api/rc2/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text),
                     success: function (data) {
                         fill('result_encryption', JSON.parse(data));
                     },
@@ -71,7 +71,7 @@
                 let cipher = $('#cipher').val();
                 $.ajax({
                     type: "get",
-                    url: '/api/railfence/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher),
+                    url: '/api/rc2/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher),
                     success: function (data) {
                         fill('result_decryption', JSON.parse(data));
                     },
