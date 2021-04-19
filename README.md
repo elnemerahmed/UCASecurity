@@ -87,9 +87,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Ahmed El Nemer - aelnemer1@smail.ucas.edu.ps\
-Etaf Abu Hadda - eabuhadda@smail.ucas.edu.ps\
-Hala Abu Sadaa - habosaeda@smail.ucas.edu.ps
+1. Ahmed El Nemer - aelnemer1@smail.ucas.edu.ps\
+2. Etaf Abu Hadda - eabuhadda@smail.ucas.edu.ps\
+3. Hala Abu Sadaa - habosaeda@smail.ucas.edu.ps
 
 Project Link: [https://github.com/elnemerahmed/UCASecurity](https://github.com/elnemerahmed/UCASecurity)
 
