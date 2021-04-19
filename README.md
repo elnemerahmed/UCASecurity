@@ -66,6 +66,7 @@ This section should list any major frameworks that you built your project using.
 4. Click on ```Clone``` button
 
 ## Usage
+After successfully installing the requirments and cloning the repository, just click ```CTRL + F5``` to start running the application.
 
 ## Roadmap
 
