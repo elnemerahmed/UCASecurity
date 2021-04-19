@@ -41,7 +41,7 @@ body {
 }
 
 .blue {
-    background-color: blue;
+    background-color: #2f5399;
 }
 
 @media (min-width: 768px) {

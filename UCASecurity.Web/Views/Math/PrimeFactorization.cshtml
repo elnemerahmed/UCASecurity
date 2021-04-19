@@ -14,7 +14,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="result">@SharedLocalizer.GetLocalizedHtmlString("PrimeFactorization_Result")</label>
-                    <input id="result" type="text" class="form-control" readonly />
+                    <input dir="ltr" id="result" type="text" class="form-control" readonly />
                 </div>
             </form>
         </div>
@@ -30,7 +30,7 @@
             if (status == 200)
                 $("#" + id).val(value);
             else
-                $("#" + id).val(error);
+                $("#" + id).html(error);
         }
 
         window.onload = function () {

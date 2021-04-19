@@ -58,7 +58,7 @@
             if (status == 200)
                 $("#" + id).val(value);
             else
-                $("#" + id).val(error);
+                $("#" + id).html(error);
         }
 
         window.onload = function () {

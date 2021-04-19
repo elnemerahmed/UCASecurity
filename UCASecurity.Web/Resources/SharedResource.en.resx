@@ -117,45 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AES_Algorithm" xml:space="preserve">
-    <value>Mode</value>
-  </data>
-  <data name="AES_CBC" xml:space="preserve">
-    <value>Cipher block chaining</value>
-  </data>
-  <data name="AES_Cipher" xml:space="preserve">
-    <value>Cipher</value>
-  </data>
-  <data name="AES_ECB" xml:space="preserve">
-    <value>Electronic codebook</value>
-  </data>
-  <data name="AES_ISO10126" xml:space="preserve">
-    <value>ISO10126</value>
-  </data>
-  <data name="AES_Key" xml:space="preserve">
-    <value>Key</value>
-  </data>
-  <data name="AES_Padding_Mode" xml:space="preserve">
-    <value>Padding Mode</value>
-  </data>
-  <data name="AES_PKCS7" xml:space="preserve">
-    <value>PKCS7</value>
-  </data>
-  <data name="AES_Result" xml:space="preserve">
-    <value>Result</value>
-  </data>
-  <data name="AES_Select_Algorithm" xml:space="preserve">
-    <value>Please select an algorithm mode</value>
-  </data>
-  <data name="AES_Select_Padding_Mode" xml:space="preserve">
-    <value>Please select a padding mode</value>
-  </data>
-  <data name="AES_Text" xml:space="preserve">
-    <value>Text</value>
-  </data>
-  <data name="AES_Zeros" xml:space="preserve">
-    <value>Zeros</value>
-  </data>
   <data name="Algorithms_AES_Title" xml:space="preserve">
     <value>AES</value>
   </data>
@@ -164,6 +125,9 @@
   </data>
   <data name="Algorithms_Caesar_Title" xml:space="preserve">
     <value>Caesar Cipher</value>
+  </data>
+  <data name="Algorithms_DES_Title" xml:space="preserve">
+    <value>DES</value>
   </data>
   <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
     <value>Generate RSA Key Pair</value>
@@ -174,6 +138,9 @@
   <data name="Algorithms_RailFence_Title" xml:space="preserve">
     <value>Rail Fence</value>
   </data>
+  <data name="Algorithms_RC2_Title" xml:space="preserve">
+    <value>RC2</value>
+  </data>
   <data name="Algorithms_RSA_Title" xml:space="preserve">
     <value>RSA Algorithm</value>
   </data>
@@ -183,29 +150,8 @@
   <data name="Arabic" xml:space="preserve">
     <value>Arabic</value>
   </data>
-  <data name="BlowFish_Cipher" xml:space="preserve">
+  <data name="Cipher" xml:space="preserve">
     <value>Cipher</value>
-  </data>
-  <data name="BlowFish_Key" xml:space="preserve">
-    <value>Key</value>
-  </data>
-  <data name="BlowFish_Result" xml:space="preserve">
-    <value>Result</value>
-  </data>
-  <data name="BlowFish_Text" xml:space="preserve">
-    <value>Text</value>
-  </data>
-  <data name="Caesar_Cipher" xml:space="preserve">
-    <value>Cipher</value>
-  </data>
-  <data name="Caesar_Key" xml:space="preserve">
-    <value>Key</value>
-  </data>
-  <data name="Caesar_Result" xml:space="preserve">
-    <value>Result</value>
-  </data>
-  <data name="Caesar_Text" xml:space="preserve">
-    <value>Text</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
@@ -237,6 +183,15 @@
   <data name="Hash_Whirlpool" xml:space="preserve">
     <value>Whirlpool Hash</value>
   </data>
+  <data name="Home_Asymmetric" xml:space="preserve">
+    <value>Asymmetric Encryption Algorithms</value>
+  </data>
+  <data name="Home_Classic" xml:space="preserve">
+    <value>Classical Encryption Algorithms</value>
+  </data>
+  <data name="Home_Hash" xml:space="preserve">
+    <value>Hash Algorithms</value>
+  </data>
   <data name="Home_Hero_Description" xml:space="preserve">
     <value>A new generation of cloud enryption online tool for educational purpuses, developed as a graduation project for Cryptography II Course.</value>
   </data>
@@ -245,6 +200,18 @@
   </data>
   <data name="Home_Index_Title" xml:space="preserve">
     <value>Home Page</value>
+  </data>
+  <data name="Home_Math" xml:space="preserve">
+    <value>Math Utilities</value>
+  </data>
+  <data name="Home_Symmetric" xml:space="preserve">
+    <value>Symmetric Encryption Algorithms</value>
+  </data>
+  <data name="Home_Team_Description" xml:space="preserve">
+    <value>Meet the team</value>
+  </data>
+  <data name="Home_Team_Title" xml:space="preserve">
+    <value>Who Are we?</value>
   </data>
   <data name="Layout_About" xml:space="preserve">
     <value>About</value>
@@ -300,35 +267,14 @@
   <data name="Math_PrimeTest_True" xml:space="preserve">
     <value>True</value>
   </data>
-  <data name="PlayFair_Cipher" xml:space="preserve">
-    <value>Cipher</value>
-  </data>
-  <data name="PlayFair_Key" xml:space="preserve">
-    <value>Key</value>
-  </data>
-  <data name="PlayFair_Result" xml:space="preserve">
-    <value>Result</value>
-  </data>
-  <data name="PlayFair_Text" xml:space="preserve">
-    <value>Text</value>
-  </data>
   <data name="PrimeFactorization_Input" xml:space="preserve">
     <value>Input</value>
   </data>
   <data name="PrimeFactorization_Result" xml:space="preserve">
     <value>Result</value>
   </data>
-  <data name="RailFence_Cipher" xml:space="preserve">
-    <value>Cipher</value>
-  </data>
-  <data name="RailFence_Key" xml:space="preserve">
-    <value>Key</value>
-  </data>
-  <data name="RailFence_Result" xml:space="preserve">
+  <data name="Result" xml:space="preserve">
     <value>Result</value>
-  </data>
-  <data name="RailFence_Text" xml:space="preserve">
-    <value>Text</value>
   </data>
   <data name="RSA_Alert_Text" xml:space="preserve">
     <value>If don't have keys yet</value>
@@ -354,16 +300,16 @@
   <data name="RSA_TextResult" xml:space="preserve">
     <value>Result</value>
   </data>
-  <data name="Vigenare_Cipher" xml:space="preserve">
-    <value>Cipher</value>
+  <data name="Symmetric_Key" xml:space="preserve">
+    <value>Encryption / Decryption key</value>
   </data>
-  <data name="Vigenare_Key" xml:space="preserve">
-    <value>Key</value>
+  <data name="Symmetric_Mode" xml:space="preserve">
+    <value>Mode</value>
   </data>
-  <data name="Vigenare_Result" xml:space="preserve">
-    <value>Result</value>
+  <data name="Symmetric_Select_Mode" xml:space="preserve">
+    <value>Please select an algorithm mode</value>
   </data>
-  <data name="Vigenare_Text" xml:space="preserve">
+  <data name="Text" xml:space="preserve">
     <value>Text</value>
   </data>
 </root>

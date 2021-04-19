@@ -9,40 +9,40 @@
         <div class="col">
             <form>
                 <div class="mb-3">
-                    <label for="mode">@SharedLocalizer.GetLocalizedHtmlString("AES_Mode")</label>
+                    <label for="mode">@SharedLocalizer.GetLocalizedHtmlString("Symmetric_Mode")</label>
                     <select id="mode" class="form-control">
-                        <option selected disabled value="">@SharedLocalizer.GetLocalizedHtmlString("AES_Select_Mode")</option>
-                        <option value="CBC/PKCS7">@SharedLocalizer.GetLocalizedHtmlString("CBC/PKCS7")</option>
-                        <option value="CBC/Zeros">@SharedLocalizer.GetLocalizedHtmlString("CBC/Zeros")</option>
-                        <option value="CBC/ISO10126">@SharedLocalizer.GetLocalizedHtmlString("CBC/ISO10126")</option>
-                        <option value="ECB/PKCS7">@SharedLocalizer.GetLocalizedHtmlString("ECB/PKCS7")</option>
-                        <option value="ECB/Zeros">@SharedLocalizer.GetLocalizedHtmlString("ECB/Zeros")</option>
-                        <option value="ECB/ISO10126">@SharedLocalizer.GetLocalizedHtmlString("ECB/ISO10126")</option>
-                        <option value="AES/OFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/OFB/NoPadding")</option>
-                        <option value="AES/CFB/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CFB/NoPadding")</option>
-                        <option value="AES/EAX/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/EAX/NoPadding")</option>
-                        <option value="AES/GCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/GCM/NoPadding")</option>
-                        <option value="AES/CCM/NoPadding">@SharedLocalizer.GetLocalizedHtmlString("AES/CCM/NoPadding")</option>
+                        <option selected disabled value="">@SharedLocalizer.GetLocalizedHtmlString("Symmetric_Select_Mode")</option>
+                        <option value="CBC/PKCS7">CBC/PKCS7</option>
+                        <option value="CBC/Zeros">CBC/Zeros</option>
+                        <option value="CBC/ISO10126">CBC/ISO10126</option>
+                        <option value="ECB/PKCS7">ECB/PKCS7</option>
+                        <option value="ECB/Zeros">ECB/Zeros</option>
+                        <option value="ECB/ISO10126">ECB/ISO10126</option>
+                        <option value="AES/OFB/NoPadding">AES/OFB/NoPadding</option>
+                        <option value="AES/CFB/NoPadding">AES/CFB/NoPadding</option>
+                        <option value="AES/EAX/NoPadding">AES/EAX/NoPadding</option>
+                        <option value="AES/GCM/NoPadding">AES/GCM/NoPadding</option>
+                        <option value="AES/CCM/NoPadding">AES/CCM/NoPadding</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("AES_Key")</label>
+                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("Symmetric_Key")</label>
                     <input id="key" type="text" class="form-control" />
                 </div>
                 <div class="mb-3">
-                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("AES_Text")</label>
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("Text")</label>
                     <textarea id="text" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("AES_Result")</label>
+                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("Result")</label>
                     <textarea id="result_encryption" class="form-control" readonly></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("AES_Cipher")</label>
+                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("Cipher")</label>
                     <textarea id="cipher" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("AES_Result")</label>
+                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("Result")</label>
                     <textarea id="result_decryption" class="form-control" readonly></textarea>
                 </div>
             </form>

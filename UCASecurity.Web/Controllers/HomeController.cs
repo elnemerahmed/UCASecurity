@@ -42,17 +42,18 @@ namespace UCASecurity.Web.Controllers
             var Math = new List<ItemViewModel>();
             Math.Add(new ItemViewModel() { Controller = "Math", Action = "PasswordStrength", Title = "Math_PasswordStrength_Title", Healthy = true });
             Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Healthy = true });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeTest", Title = "Math_PrimeTest_Title", Healthy = true });
             Math.Add(new ItemViewModel() { Controller = "Math", Action = "GCD", Title = "Math_GCD_Title", Healthy = true });
 
-            var Other = new List<ItemViewModel>();
-            Other.Add(new ItemViewModel() { Controller = "Functions", Action = "Hash", Title = "Functions_Hash_Title", Healthy = true });
+            var Hash = new List<ItemViewModel>();
+            Hash.Add(new ItemViewModel() { Controller = "Functions", Action = "Hash", Title = "Functions_Hash_Title", Healthy = true });
            
 
             ViewBag.Classic = Classic;
             ViewBag.Symmetric = Symmetric;
             ViewBag.Asymmetric = Asymmetric;
             ViewBag.Math = Math;
-            ViewBag.Other = Other;
+            ViewBag.Hash = Hash;
             return View();
         }       
         public IActionResult SetLanguage(string culture, string returnUrl)

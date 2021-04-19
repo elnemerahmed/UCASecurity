@@ -9,23 +9,23 @@
         <div class="col">
             <form>
                 <div class="mb-3">
-                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("RC2_Key")</label>
+                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("Symmetric_Key")</label>
                     <input id="key" type="text" class="form-control" />
                 </div>
                 <div class="mb-3">
-                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("RC2_Text")</label>
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("Text")</label>
                     <textarea id="text" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("RC2_Result")</label>
+                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("Result")</label>
                     <textarea id="result_encryption" class="form-control" readonly></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("RC2_Cipher")</label>
+                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("Cipher")</label>
                     <textarea id="cipher" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("RC2_Result")</label>
+                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("Result")</label>
                     <textarea id="result_decryption" class="form-control" readonly></textarea>
                 </div>
             </form>
@@ -43,7 +43,7 @@
             if (status == 200)
                 $("#" + id).val(value);
             else
-                $("#" + id).val(error);
+                $("#" + id).html(error);
         }
 
         window.onload = function () {

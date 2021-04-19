@@ -117,92 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AES_Algorithm" xml:space="preserve">
-    <value>نوع الخوارزمية</value>
-  </data>
-  <data name="AES_CBC" xml:space="preserve">
-    <value>تسلسل البلوكات المشفرة</value>
-  </data>
-  <data name="AES_Cipher" xml:space="preserve">
-    <value>الشيفرة</value>
-  </data>
-  <data name="AES_ECB" xml:space="preserve">
-    <value>كتاب الشيفرات الإلكتروني</value>
-  </data>
-  <data name="AES_ISO10126" xml:space="preserve">
-    <value>ISO10126</value>
-  </data>
-  <data name="AES_Key" xml:space="preserve">
-    <value>مفتاح التشفير / فك التشفير</value>
-  </data>
-  <data name="AES_Padding_Mode" xml:space="preserve">
-    <value>الحشو</value>
-  </data>
-  <data name="AES_PKCS7" xml:space="preserve">
-    <value>PKCS7</value>
-  </data>
-  <data name="AES_Result" xml:space="preserve">
-    <value>النتيجة</value>
-  </data>
-  <data name="AES_Select_Algorithm" xml:space="preserve">
-    <value>من فضلك إختر نوع الخوارزمية</value>
-  </data>
-  <data name="AES_Select_Padding_Mode" xml:space="preserve">
-    <value>من فضلك إختر نوع الحشو</value>
-  </data>
-  <data name="AES_Text" xml:space="preserve">
-    <value>النص</value>
-  </data>
-  <data name="AES_Zeros" xml:space="preserve">
-    <value>Zeros</value>
-  </data>
   <data name="Algorithms_AES_Title" xml:space="preserve">
     <value>خوارزمية AES</value>
   </data>
   <data name="Algorithms_BlowFish_Title" xml:space="preserve">
-    <value>خوارزمية السمكة المنتفخة</value>
+    <value>خوارزمية Blow Fish</value>
   </data>
   <data name="Algorithms_Caesar_Title" xml:space="preserve">
     <value>شيفرة القيصر</value>
+  </data>
+  <data name="Algorithms_DES_Title" xml:space="preserve">
+    <value>خوارزمية DES</value>
   </data>
   <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
     <value>توليد مفاتيح تشفير جديدة لخوارزمية RSA</value>
   </data>
   <data name="Algorithms_PlayFair_Title" xml:space="preserve">
-    <value>اللعب العادل</value>
+    <value>خوارزمية Play Fair</value>
   </data>
   <data name="Algorithms_RailFence_Title" xml:space="preserve">
-    <value>سياج السكة الحديدية</value>
+    <value>خوارزمية Rail Fence</value>
+  </data>
+  <data name="Algorithms_RC2_Title" xml:space="preserve">
+    <value>خوارزمية RC2</value>
   </data>
   <data name="Algorithms_RSA_Title" xml:space="preserve">
     <value>خوارزمية RSA</value>
   </data>
   <data name="Algorithms_Vigenare_Title" xml:space="preserve">
-    <value>خوارزمية فيجينير</value>
+    <value>خوارزمية Vigenare</value>
   </data>
-  <data name="BlowFish_Cipher" xml:space="preserve">
+  <data name="Cipher" xml:space="preserve">
     <value>الشيفرة</value>
-  </data>
-  <data name="BlowFish_Key" xml:space="preserve">
-    <value>مفتاح التشفير / فك التشفير</value>
-  </data>
-  <data name="BlowFish_Result" xml:space="preserve">
-    <value>النتيجة</value>
-  </data>
-  <data name="BlowFish_Text" xml:space="preserve">
-    <value>النص</value>
-  </data>
-  <data name="Caesar_Cipher" xml:space="preserve">
-    <value>الشيفرة</value>
-  </data>
-  <data name="Caesar_Key" xml:space="preserve">
-    <value>مفتاح التشفير / فك التشفير</value>
-  </data>
-  <data name="Caesar_Result" xml:space="preserve">
-    <value>النتيجة</value>
-  </data>
-  <data name="Caesar_Text" xml:space="preserve">
-    <value>النص</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>الإنجليزية</value>
@@ -211,7 +157,7 @@
     <value>خطأ</value>
   </data>
   <data name="Functions_Hash_Title" xml:space="preserve">
-    <value>صفحة الهاشات</value>
+    <value>حساب قيمة Hash</value>
   </data>
   <data name="Hash_MD5" xml:space="preserve">
     <value>هاش MD5</value>
@@ -237,6 +183,15 @@
   <data name="Hash_Whirlpool" xml:space="preserve">
     <value>هاش Whirlpool</value>
   </data>
+  <data name="Home_Asymmetric" xml:space="preserve">
+    <value>خوارزميات التشفير Asymmetric</value>
+  </data>
+  <data name="Home_Classic" xml:space="preserve">
+    <value>خوارزميات التشفير الكلاسيكية</value>
+  </data>
+  <data name="Home_Hash" xml:space="preserve">
+    <value>خوارزميات حساب Hash</value>
+  </data>
   <data name="Home_Hero_Description" xml:space="preserve">
     <value>الجيل الجديد من أدوات التشفير السحابية ذات الإستخدام التعليمي, تم تطويرها كمشروع تخروج لمساق التشفير المتقدم</value>
   </data>
@@ -245,6 +200,18 @@
   </data>
   <data name="Home_Index_Title" xml:space="preserve">
     <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="Home_Math" xml:space="preserve">
+    <value>أدوات رياضية مساعدة</value>
+  </data>
+  <data name="Home_Symmetric" xml:space="preserve">
+    <value>خورازميات التشفير Symmetric</value>
+  </data>
+  <data name="Home_Team_Description" xml:space="preserve">
+    <value>تعرف على فريق العمل</value>
+  </data>
+  <data name="Home_Team_Title" xml:space="preserve">
+    <value>من نحن؟</value>
   </data>
   <data name="Layout_About" xml:space="preserve">
     <value>من نحن</value>
@@ -300,35 +267,14 @@
   <data name="Math_PrimeTest_True" xml:space="preserve">
     <value>صحيح</value>
   </data>
-  <data name="PlayFair_Cipher" xml:space="preserve">
-    <value>الشيفرة</value>
-  </data>
-  <data name="PlayFair_Key" xml:space="preserve">
-    <value>مفتاح التشفير / فك التشفير</value>
-  </data>
-  <data name="PlayFair_Result" xml:space="preserve">
-    <value>النتيجة</value>
-  </data>
-  <data name="PlayFair_Text" xml:space="preserve">
-    <value>النص</value>
-  </data>
   <data name="PrimeFactorization_Input" xml:space="preserve">
     <value>الرقم</value>
   </data>
   <data name="PrimeFactorization_Result" xml:space="preserve">
     <value>النتيجة</value>
   </data>
-  <data name="RailFence_Cipher" xml:space="preserve">
-    <value>الشيفرة</value>
-  </data>
-  <data name="RailFence_Key" xml:space="preserve">
-    <value>مفتاح التشفير / فك التشفير</value>
-  </data>
-  <data name="RailFence_Result" xml:space="preserve">
+  <data name="Result" xml:space="preserve">
     <value>النتيجة</value>
-  </data>
-  <data name="RailFence_Text" xml:space="preserve">
-    <value>النص</value>
   </data>
   <data name="RSA_Alert_Text" xml:space="preserve">
     <value>إذا كنت لا تمتلك مفاتيح التشفير وفك التشفير</value>
@@ -354,16 +300,16 @@
   <data name="RSA_TextResult" xml:space="preserve">
     <value>نتيجة فك التشفير</value>
   </data>
-  <data name="Vigenare_Cipher" xml:space="preserve">
-    <value>الشيفرة</value>
-  </data>
-  <data name="Vigenare_Key" xml:space="preserve">
+  <data name="Symmetric_Key" xml:space="preserve">
     <value>مفتاح التشفير / فك التشفير</value>
   </data>
-  <data name="Vigenare_Result" xml:space="preserve">
-    <value>النتيجة</value>
+  <data name="Symmetric_Mode" xml:space="preserve">
+    <value>الوضع</value>
   </data>
-  <data name="Vigenare_Text" xml:space="preserve">
+  <data name="Symmetric_Select_Mode" xml:space="preserve">
+    <value>من فضلك إختر الوضع</value>
+  </data>
+  <data name="Text" xml:space="preserve">
     <value>النص</value>
   </data>
 </root>
