@@ -44,13 +44,11 @@ Of course, no one template will serve all projects since your needs may be diffe
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
+* [.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [Bouncy Castle](https://www.bouncycastle.org)
+* [Bootstrap 5](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
-
+* [Javascript](https://www.javascript.com)
 
 ## Getting Started
 
