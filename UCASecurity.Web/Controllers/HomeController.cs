@@ -25,6 +25,7 @@ namespace UCASecurity.Web.Controllers
         {
             return View();
         }
+        [Route("/Learn/{id}")]
         public IActionResult Learn(string id)
         {
             var validAlgorithmNames = new List<LearnViewModel>();
@@ -37,11 +38,10 @@ namespace UCASecurity.Web.Controllers
             validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "BlowFish", Title = "Algorithms_BlowFish_Title", Image = "blowfish.png" });
             validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "RC2", Title = "Algorithms_RC2_Title", Image = "rc2.png" });
             validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "RSA", Title = "Algorithms_RSA_Title", Image = "rsa.png" });
-            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "PasswordStrength", Title = "Math_PasswordStrength_Title", Image = "" });
-            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Image = "" });
-            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "GCD", Title = "Math_GCD_Title", Image = "" });
-
-            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "Hash", Title = "Functions_Hash_Title", Image = "" });
+            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "PasswordStrength", Title = "Math_PasswordStrength_Title", Image = "password.png" });
+            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Image = "primefactorization.png" });
+            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "GCD", Title = "Math_GCD_Title", Image = "gcd.png" });
+            validAlgorithmNames.Add(new LearnViewModel() { Algorithm = "Hash", Title = "Functions_Hash_Title", Image = "hash.png" });
 
             var result = validAlgorithmNames.FirstOrDefault(m => m.Algorithm.Equals(id));
             if (result == null)
@@ -79,10 +79,10 @@ namespace UCASecurity.Web.Controllers
         public IActionResult Math()
         {
             var Math = new List<ItemViewModel>();
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PasswordStrength", Title = "Math_PasswordStrength_Title", Healthy = true });
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Healthy = true });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PasswordStrength", Title = "Math_PasswordStrength_Title", Healthy = true, Image = "password.png" });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Healthy = true, Image = "primefactorization.png" });
             Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeTest", Title = "Math_PrimeTest_Title", Healthy = true, HasInfo = false  });
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "GCD", Title = "Math_GCD_Title", Healthy = true });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "GCD", Title = "Math_GCD_Title", Healthy = true, Image = "gcd.png" });
 
             ViewBag.Math = Math;
             return View();

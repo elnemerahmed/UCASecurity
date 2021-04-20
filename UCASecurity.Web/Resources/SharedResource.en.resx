@@ -156,8 +156,14 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="Functions_Hash_Message" xml:space="preserve">
+    <value>To learn more about hashes click</value>
+  </data>
   <data name="Functions_Hash_Title" xml:space="preserve">
     <value>Hash Functions</value>
+  </data>
+  <data name="Functions_Hash_URL" xml:space="preserve">
+    <value>here</value>
   </data>
   <data name="Hash_MD5" xml:space="preserve">
     <value>MD5 Hash</value>
@@ -213,8 +219,17 @@
   <data name="Home_Symmetric" xml:space="preserve">
     <value>Symmetric Encryption</value>
   </data>
+  <data name="Home_Team_Ahmed" xml:space="preserve">
+    <value>Eng. Ahmed El Nemer</value>
+  </data>
   <data name="Home_Team_Description" xml:space="preserve">
     <value>Meet the team</value>
+  </data>
+  <data name="Home_Team_Etaf" xml:space="preserve">
+    <value>Eng. Etaf Abu Hadda</value>
+  </data>
+  <data name="Home_Team_Hala" xml:space="preserve">
+    <value>Eng. Hala Abu Sada</value>
   </data>
   <data name="Home_Team_Title" xml:space="preserve">
     <value>Who Are we?</value>
@@ -249,8 +264,20 @@
   <data name="Learn_DES" xml:space="preserve">
     <value>The DES (Data Encryption Standard) algorithm is a symmetric-key block cipher created in the early 1970s by an IBM team and adopted by the (NIST). that was the most widely used encryption scheme. Before the publishing of AES, The algorithm takes the plain text in 64-bit blocks and converts them into ciphertext using 48-bit keys. it depends essentially on permutations.</value>
   </data>
+  <data name="Learn_GCD" xml:space="preserve">
+    <value>it calculates the Great Common Divisor between two integers.</value>
+  </data>
+  <data name="Learn_Hash" xml:space="preserve">
+    <value>it calculates different hashes for specific text,MD5 Hash,  RIPEMD 160 Hash, SHA1, SHA256,SHA512, Tiger Hash,Whirlpool Hash, the user provides specific text to calculate hashes for it .</value>
+  </data>
+  <data name="Learn_PasswordStrength" xml:space="preserve">
+    <value>this algorithm calculates how strong your password is, you have to provide your password and it will display a percent, the perfect password contains lower and upper case letters, numbers, Non Alphabetical Characters, and it's length equal or more than eight characters.</value>
+  </data>
   <data name="Learn_PlayFair" xml:space="preserve">
     <value>The Playfair cipher (Playfair square) is a type of substitution cipher used for the encryption of data &amp; Introduced in 1854. It involved the use of keys that arrange alphabetical letters in geometric patterns in order to encode messages that we encrypt a pair of alphabets(digraphs) instead of a single alphabet.</value>
+  </data>
+  <data name="Learn_PrimeFactorization" xml:space="preserve">
+    <value>it calculates the prime factors of the given number, and calculate it as multiplied numbers.</value>
   </data>
   <data name="Learn_RailFence" xml:space="preserve">
     <value>Rail Fence cipher is a transposition cipher that the plaintext is written downwards and diagonally on successive rails of an imaginary fence. When we reach the bottom rail, we traverse upwards moving diagonally, after reaching the top rail, the direction is changed again. Thus the alphabets of the message are written in a zig-zag manner. After each alphabet has been written, the individual rows are combined to obtain the cipher-text.</value>

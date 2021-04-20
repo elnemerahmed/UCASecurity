@@ -156,8 +156,14 @@
   <data name="Error" xml:space="preserve">
     <value>خطأ</value>
   </data>
+  <data name="Functions_Hash_Message" xml:space="preserve">
+    <value>لتعلم المزيد أنقر</value>
+  </data>
   <data name="Functions_Hash_Title" xml:space="preserve">
     <value>حساب قيمة Hash</value>
+  </data>
+  <data name="Functions_Hash_URL" xml:space="preserve">
+    <value>هنا</value>
   </data>
   <data name="Hash_MD5" xml:space="preserve">
     <value>هاش MD5</value>
@@ -199,7 +205,7 @@
     <value>خوارزميات حساب Hash</value>
   </data>
   <data name="Home_Hero_Description" xml:space="preserve">
-    <value>الجيل الجديد من أدوات التشفير السحابية ذات الإستخدام التعليمي, تم تطويرها كمشروع تخروج لمساق التشفير المتقدم</value>
+    <value>الجيل الجديد من أدوات التشفير السحابية ذات الاستخدام التعليمي, تم تطويرها كمشروع لمساق التشفير المتقدم</value>
   </data>
   <data name="Home_Hero_Title" xml:space="preserve">
     <value>أداة يوكاس كريبتو</value>
@@ -213,8 +219,17 @@
   <data name="Home_Symmetric" xml:space="preserve">
     <value>خورازميات التشفير Symmetric</value>
   </data>
+  <data name="Home_Team_Ahmed" xml:space="preserve">
+    <value>م. أحمد النمر</value>
+  </data>
   <data name="Home_Team_Description" xml:space="preserve">
     <value>تعرف على فريق العمل</value>
+  </data>
+  <data name="Home_Team_Etaf" xml:space="preserve">
+    <value>م. عطاف أبو هدة</value>
+  </data>
+  <data name="Home_Team_Hala" xml:space="preserve">
+    <value>م. هلا أبو سعدة</value>
   </data>
   <data name="Home_Team_Title" xml:space="preserve">
     <value>من نحن؟</value>
@@ -249,8 +264,21 @@
   <data name="Learn_DES" xml:space="preserve">
     <value>DES هي خوارزمية تشفير تماثل، تعتبر من أكثر الخوارزميات استعمالًا قبل ظهور AES، تأخذ الخوارزمية مدخلين الأول: النص المراد تشفيره والثاني هو المفتاح، في DES يجب أن يكون طول النص 64 بت وطول المفتاح 48 بت. تعتمد بشكل أساسي على التبديل والتقليب في التشفير.</value>
   </data>
+  <data name="Learn_GCD" xml:space="preserve">
+    <value>تقوم هذه الخوارزمية بحساب العامل المشترك الأكبر بين رقمين صحيحين</value>
+  </data>
+  <data name="Learn_Hash" xml:space="preserve">
+    <value>تقوم بحساب قيمة الهاش لنص معين، حيث يقوم المستخدم بإضافة النص ويقوم البرنامج بطباعة الهاش بقيمه المختلفة</value>
+  </data>
+  <data name="Learn_PasswordStrength" xml:space="preserve">
+    <value>تقوم هذه الخوارزمية بتقييم قوة كلمة المرور، حيث يجب عليك تزويدها بكلمة المرور وستقوم بفحصها وطبعا نسبة على الشاشة تبين مدى قوة هذه الكلمة، 
+كلمة المرور الجيدة تتكون من حروف كبيرة وصغيرة وأرقام ورموز خاصة وطولها أكبر أو يساوي ثمانية أحرف</value>
+  </data>
   <data name="Learn_PlayFair" xml:space="preserve">
     <value>خوارزمية Playfair هي نوع من شيفرات الاستبدال المستخدمة لتشفير البيانات. تم تقديمها في عام 1854، وقد اشتملت على استخدام المفاتيح التي ترتب الحروف الأبجدية في أنماط هندسية من أجل تشفير الرسائل. يتم تشفير زوج من الحروف الهجائية في كل مرة بدلاً من تشفير حرف واحد</value>
+  </data>
+  <data name="Learn_PrimeFactorization" xml:space="preserve">
+    <value>تقوم هذه الخوارزمية بحساب العوامل الأولية للرقم المعطى ، ويطبع العوامل بصيغة الضرب</value>
   </data>
   <data name="Learn_RailFence" xml:space="preserve">
     <value>خوارزمية RailFence   من شيفرات التحويل (Transposition) حيث يتم كتابة النص الأصلي لأسفل وقطريًا على قضبان متتالية من السياج الوهمي. عندما نصل إلى السكة السفلية ، نتحرك صعودًا قطريًا ، وبعد الوصول إلى السكة العلوية ، يتغير الاتجاه مرة أخرى. وهكذا تتم كتابة الحروف الهجائية للرسالة بطريقة متعرجة. بعد الانتهاء من الكتابة، يتم دمج الصفوف الفردية للحصول على نص مشفر.</value>
