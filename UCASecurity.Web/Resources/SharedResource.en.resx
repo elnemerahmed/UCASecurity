@@ -258,11 +258,11 @@
   <data name="Layout_About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="Layout_Algorithms" xml:space="preserve">
+    <value>Algorithms</value>
+  </data>
   <data name="Layout_Brand" xml:space="preserve">
     <value>UCAS Crypto Tool</value>
-  </data>
-  <data name="Layout_Features" xml:space="preserve">
-    <value>Features</value>
   </data>
   <data name="Layout_Footer" xml:space="preserve">
     <value>UCAS 2021</value>

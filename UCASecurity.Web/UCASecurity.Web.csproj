@@ -5,18 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Resources\RailFenceCipher.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\UCASecurity.Encryption\UCASecurity.Encryption.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Resources\RailFenceCipher.cs" />
   </ItemGroup>
 </Project>

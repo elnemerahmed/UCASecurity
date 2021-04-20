@@ -52,16 +52,16 @@ namespace UCASecurity.Web.Controllers
         public IActionResult Symmetric()
         {
             var Classic = new List<ItemViewModel>();
-            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "Caesar", Title = "Algorithms_Caesar_Title", Healthy = new Caesar().Health(), Image = "ceaser.png" });
-            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "Vigenare", Title = "Algorithms_Vigenare_Title", Healthy = new Vigenare().Health(), Image = "vigenare.png" });
-            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "PlayFair", Title = "Algorithms_PlayFair_Title", Healthy = new PlayFair().Health(), Image = "playfair.png" });
-            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "RailFence", Title = "Algorithms_RailFence_Title", Healthy = new RailFence().Health(), Image = "railfence.png" });
+            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "Caesar", Title = "Algorithms_Caesar_Title", Healthy = new Caesar().Health(), Image = "ceaser.gif" });
+            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "Vigenare", Title = "Algorithms_Vigenare_Title", Healthy = new Vigenare().Health(), Image = "vigenare.gif" });
+            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "PlayFair", Title = "Algorithms_PlayFair_Title", Healthy = new PlayFair().Health(), Image = "playfair.gif" });
+            Classic.Add(new ItemViewModel() { Controller = "Algorithms", Action = "RailFence", Title = "Algorithms_RailFence_Title", Healthy = new RailFence().Health(), Image = "railfence.gif" });
 
             var Advanced = new List<ItemViewModel>();
-            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "AES", Title = "Algorithms_AES_Title", Healthy = new AES1("AES/OFB/NoPadding").Health() && new AES2("CBC", "PKCS7").Health(), Image = "aes.png" });
-            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "DES", Title = "Algorithms_DES_Title", Healthy = new DES("CBC", "PKCS7").Health(), Image = "des.png" });
-            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "BlowFish", Title = "Algorithms_BlowFish_Title", Healthy = new BlowFish().Health(), Image = "blowfish.png" });
-            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "RC2", Title = "Algorithms_RC2_Title", Healthy = new RC2().Health(), Image = "rc2.png" });
+            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "AES", Title = "Algorithms_AES_Title", Healthy = new AES1("AES/OFB/NoPadding").Health() && new AES2("CBC", "PKCS7").Health(), Image = "aes.gif" });
+            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "DES", Title = "Algorithms_DES_Title", Healthy = new DES("CBC", "PKCS7").Health(), Image = "des.gif" });
+            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "BlowFish", Title = "Algorithms_BlowFish_Title", Healthy = new BlowFish().Health(), Image = "blowfish.gif" });
+            Advanced.Add(new ItemViewModel() { Controller = "Algorithms", Action = "RC2", Title = "Algorithms_RC2_Title", Healthy = new RC2().Health(), Image = "rc2.gif" });
 
             ViewBag.Classic = Classic;
             ViewBag.Advanced = Advanced;
@@ -71,7 +71,7 @@ namespace UCASecurity.Web.Controllers
         public IActionResult Asymmetric()
         {
             var Asymmetric = new List<ItemViewModel>();
-            Asymmetric.Add(new ItemViewModel() { Controller = "Algorithms", Action = "RSA", Title = "Algorithms_RSA_Title", Healthy = new RSA().Health(), Image = "rsa.png" });
+            Asymmetric.Add(new ItemViewModel() { Controller = "Algorithms", Action = "RSA", Title = "Algorithms_RSA_Title", Healthy = new RSA().Health(), Image = "rsa.gif" });
 
             ViewBag.Asymmetric = Asymmetric;
             return View();
@@ -79,10 +79,10 @@ namespace UCASecurity.Web.Controllers
         public IActionResult Math()
         {
             var Math = new List<ItemViewModel>();
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PasswordStrength", Title = "Math_PasswordStrength_Title", Healthy = true, Image = "password.png" });
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Healthy = true, Image = "primefactorization.png" });
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeTest", Title = "Math_PrimeTest_Title", Healthy = true, HasInfo = false  });
-            Math.Add(new ItemViewModel() { Controller = "Math", Action = "GCD", Title = "Math_GCD_Title", Healthy = true, Image = "gcd.png" });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PasswordStrength", Title = "Math_PasswordStrength_Title", Healthy = true, Image = "password.gif" });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeFactorization", Title = "Math_PrimeFactorization_Title", Healthy = true, Image = "factorization.gif" });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "PrimeTest", Title = "Math_PrimeTest_Title", Healthy = true, HasInfo = false, Image = "primes.gif" });
+            Math.Add(new ItemViewModel() { Controller = "Math", Action = "GCD", Title = "Math_GCD_Title", Healthy = true, Image = "gcd.gif" });
 
             ViewBag.Math = Math;
             return View();

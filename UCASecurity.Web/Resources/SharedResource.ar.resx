@@ -258,11 +258,11 @@
   <data name="Layout_About" xml:space="preserve">
     <value>من نحن</value>
   </data>
+  <data name="Layout_Algorithms" xml:space="preserve">
+    <value>الخوارزميات</value>
+  </data>
   <data name="Layout_Brand" xml:space="preserve">
     <value>أداة يوكاس كريبتو</value>
-  </data>
-  <data name="Layout_Features" xml:space="preserve">
-    <value>المميزات</value>
   </data>
   <data name="Layout_Footer" xml:space="preserve">
     <value>يوكاس 2021</value>
