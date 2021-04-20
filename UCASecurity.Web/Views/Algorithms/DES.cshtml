@@ -58,39 +58,58 @@
                 $("#" + id).html(error);
         }
 
-        window.onload = function () {
-            $("#text").on('change keyup paste', function () {
-                let mode = $('#mode').val();
-                let key = $('#key').val();
-                if (key === '' || key === undefined || mode === '' || mode === undefined)
-                    return;
+        function encrypt() {
+            let mode = $('#mode').val();
+            let key = $('#key').val();
+            if (key === '' || key === undefined || mode === '' || mode === undefined)
+                return;
 
+            let text = $('#text').val();
+            $.ajax({
+                type: "get",
+                url: '/api/aes/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text) + '&mode=' + encodeURIComponent(mode),
+                success: function (data) {
+                    fill('result_encryption', JSON.parse(data));
+                },
+                dataType: "HTML"
+            });
+        }
+
+        function decrypt() {
+            let mode = $('#mode').val();
+            let key = $('#key').val();
+            if (key === '' || key === undefined || mode === '' || mode === undefined)
+                return;
+
+            let cipher = $('#cipher').val();
+            $.ajax({
+                type: "get",
+                url: '/api/aes/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher) + '&mode=' + encodeURIComponent(mode),
+                success: function (data) {
+                    fill('result_decryption', JSON.parse(data));
+                },
+                dataType: "HTML"
+            });
+        }
+
+        window.onload = function () {
+            $("#mode").change(function () {
                 let text = $('#text').val();
-                $.ajax({
-                    type: "get",
-                    url: '/api/aes/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text) + '&mode=' + encodeURIComponent(mode),
-                    success: function (data) {
-                        fill('result_encryption', JSON.parse(data));
-                    },
-                    dataType: "HTML"
-                });
+                let cipher = $('#cipher').val();
+                if (text !== '' && text !== undefined) {
+                    encrypt();
+                }
+                if (cipher !== '' && cipher !== undefined) {
+                    decrypt();
+                }
+            });
+
+            $("#text").on('change keyup paste', function () {
+                encrypt();
             });
 
             $("#cipher").on('change keyup paste', function () {
-                let mode = $('#mode').val();
-                let key = $('#key').val();
-                if (key === '' || key === undefined || mode === '' || mode === undefined)
-                    return;
-
-                let cipher = $('#cipher').val();
-                $.ajax({
-                    type: "get",
-                    url: '/api/aes/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher) + '&mode=' + encodeURIComponent(mode),
-                    success: function (data) {
-                        fill('result_decryption', JSON.parse(data));
-                    },
-                    dataType: "HTML"
-                });
+                decrypt();
             });
         }
     </script>
