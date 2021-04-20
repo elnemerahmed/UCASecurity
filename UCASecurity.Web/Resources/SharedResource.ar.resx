@@ -201,6 +201,15 @@
   <data name="Home_Features_Title" xml:space="preserve">
     <value>المميزات</value>
   </data>
+  <data name="Home_Feature_A" xml:space="preserve">
+    <value>سهولة الوصول، يمكن للطلاب التفاعل معها من أي مكان.</value>
+  </data>
+  <data name="Home_Feature_B" xml:space="preserve">
+    <value>تجمع كل الخوارزميات في برنامج واحد، لذلك لا حاجة لبرامج اضافية.</value>
+  </data>
+  <data name="Home_Feature_C" xml:space="preserve">
+    <value>مجانية ومفتوحة المصدر، الكود متوافر على</value>
+  </data>
   <data name="Home_Hash" xml:space="preserve">
     <value>خوارزميات حساب Hash</value>
   </data>

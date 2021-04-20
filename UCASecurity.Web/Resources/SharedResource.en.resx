@@ -201,6 +201,15 @@
   <data name="Home_Features_Title" xml:space="preserve">
     <value>Features</value>
   </data>
+  <data name="Home_Feature_A" xml:space="preserve">
+    <value>Accessibility, students can interact with our tool anywhere.</value>
+  </data>
+  <data name="Home_Feature_B" xml:space="preserve">
+    <value>All-in-one, no need for extra software installation.</value>
+  </data>
+  <data name="Home_Feature_C" xml:space="preserve">
+    <value>Free and Open source, its source code available on</value>
+  </data>
   <data name="Home_Hash" xml:space="preserve">
     <value>Hash Algorithms</value>
   </data>
