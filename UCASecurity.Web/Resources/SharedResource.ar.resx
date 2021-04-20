@@ -183,6 +183,9 @@
   <data name="Hash_Whirlpool" xml:space="preserve">
     <value>هاش Whirlpool</value>
   </data>
+  <data name="Home_Advanced" xml:space="preserve">
+    <value>الخوارزميات المتقدمة</value>
+  </data>
   <data name="Home_Asymmetric" xml:space="preserve">
     <value>خوارزميات التشفير Asymmetric</value>
   </data>

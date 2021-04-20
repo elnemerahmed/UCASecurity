@@ -183,6 +183,9 @@
   <data name="Hash_Whirlpool" xml:space="preserve">
     <value>Whirlpool Hash</value>
   </data>
+  <data name="Home_Advanced" xml:space="preserve">
+    <value>Advanced Algorithms</value>
+  </data>
   <data name="Home_Asymmetric" xml:space="preserve">
     <value>Asymmetric Encryption Algorithms</value>
   </data>

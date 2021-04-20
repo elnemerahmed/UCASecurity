@@ -11,5 +11,6 @@ namespace UCASecurity.Web.ViewModels
         public bool Healthy { get; set; }
         public string Controller { get; set; }
         public string Action { get; set; }
+        public string image { get; set; }
     }
 }

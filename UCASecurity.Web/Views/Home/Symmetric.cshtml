@@ -1,0 +1,52 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{ 
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Symmetric");
+    List<ItemViewModel> Classic = ViewBag.Classic;
+    List<ItemViewModel> Advanced = ViewBag.Advanced;
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Classic")</h1>
+            </div>
+        </div>
+        <div class="row pt-3">
+            @foreach (var algorithm in Classic)
+            {
+                <div class="pt-2 col-12 col-md-3 col-sm-4">
+                    <a class="no-underline" asp-controller="@algorithm.Controller" asp-action="@algorithm.Action">
+                        <div class="card">
+                            <img src="~/images/@algorithm.image" class="card-img-top" alt="">
+                            <div class="card-body text-center">
+                                <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString(algorithm.Title)</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="row pt-5">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Advanced")</h1>
+            </div>
+        </div>
+        <div class="row pt-3">
+            @foreach (var algorithm in Advanced)
+            {
+                <div class="pt-2 col-12 col-md-3 col-sm-4">
+                    <a class="no-underline" asp-controller="@algorithm.Controller" asp-action="@algorithm.Action">
+                        <div class="card">
+                            <img src="~/images/@algorithm.image" class="card-img-top" alt="">
+                            <div class="card-body text-center">
+                                <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString(algorithm.Title)</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

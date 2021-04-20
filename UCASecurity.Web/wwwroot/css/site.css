@@ -44,6 +44,31 @@ body {
     background-color: #2f5399;
 }
 
+.yellow {
+    background-color: #ffd74b;
+}
+
+.team {
+    padding: 10px 80px;
+}
+
+.text-blue {
+    color: #2f5399;
+}
+
+.team-member {
+    border-radius: 50%;
+    background-color: #daf0fe;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.card img {
+    height: 300px;
+}
+
 @media (min-width: 768px) {
     .brand-text {
         margin-left: 7px !important;

@@ -1,96 +1,122 @@
 ﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
 
 @{
-    List<ItemViewModel> Classic = ViewBag.Classic;
-    List<ItemViewModel> Symmetric = ViewBag.Symmetric;
-    List<ItemViewModel> Asymmetric = ViewBag.Asymmetric;
-    List<ItemViewModel> Math = ViewBag.Math;
-    List<ItemViewModel> Hash = ViewBag.Hash;
-
-    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Index_Title");
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Index_Title"); 
 }
 
 <div class="container pt-5" style=" min-height: 85vh !important; ">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5 w-100">
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="~/images/hero.gif" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="~/images/hero.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">@SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Title")</h1>
+            <h1 class="display-5 fw-bold lh-1 mb-3 text-blue">@SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Title")</h1>
             <p class="lead">
                 @SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Description")
             </p>
         </div>
     </div>
 </div>
-<div id="team" class="blue text-light">
+
+<div id="features" class="white py-5">
     <div class="container">
         <div class="row">
-            <div class="col py-5 text-center">
-                <h1>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Title")</h1>
-                <span>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Description")</span>
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Features_Title")</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-sm-6">
+                <div class="p-5 text-center">
+                    <img class="w-100 rounded-circle" src="~/images/lock.jpeg" alt="Lock" />
+                    <p class="pt-3 display-6">@SharedLocalizer.GetLocalizedHtmlString("Home_Features_A")</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6">
+                <div class="p-5 text-center">
+                    <img class="w-100 rounded-circle" src="~/images/website.jpeg" alt="Website" />
+                    <p class="pt-5 display-6">@SharedLocalizer.GetLocalizedHtmlString("Home_Features_B")</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6">
+                <div class="p-5 text-center">
+                    <img class="w-100 rounded-circle" src="~/images/guard.jpeg" alt="Guard" />
+                    <p class="pt-3 display-6">@SharedLocalizer.GetLocalizedHtmlString("Home_Features_C")</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="white">
+<div class="py-5">
     <div class="container">
-        <div class="row py-5">
-            <div class="col-12 col-md-4 col-sm-6">
-                <img class="w-100" src="~/images/hero.gif" alt="Alternate Text" />
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Algorithms_Title")</h1>
             </div>
-            <div class="col-12 col-md-4 col-sm-6">
-                <img class="w-100" src="~/images/hero.gif" alt="Alternate Text" />
+        </div>
+        <div class="row pt-3">
+            <div class="pt-2 col-12 col-md-3 col-sm-4">
+                <a class="no-underline" asp-controller="Home" asp-action="Symmetric">
+                    <div class="card">
+                        <img src="~/images/lock.jpeg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Symmetric")</h5>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-4 col-sm-6">
-                <img class="w-100" src="~/images/hero.gif" alt="Alternate Text" />
+            <div class="pt-2 col-12 col-md-3 col-sm-4">
+                <a class="no-underline" asp-controller="Home" asp-action="Asymmetric">
+                    <div class="card">
+                        <img src="https://classic.cdn.media.amplience.net/i/dfs/?layer0=[canvas=600,462]&layer1=[src=/i/dfs/HP_pongo&pecrop=15,0,15,0&w=600&h=384&anchor=tl&top=78]&layer2=[/i/dfs/spring_sale_2021-lp-homepage_side_mobile&w=600]&layer4=[src=/i/dfs/pongo_spring21_LP_pricepoint&ecrop=0,0,85,35&anchor=br&right=0&bottom=30]&qlt=70&fmt=jpg&fmt.jpeg.chroma=1,1,1" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Asymmetric")</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="pt-2 col-12 col-md-3 col-sm-4">
+                <a class="no-underline" asp-controller="Home" asp-action="Math">
+                    <div class="card">
+                        <img src="~/images/lock.jpeg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Math")</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="pt-2 col-12 col-md-3 col-sm-4">
+                <a class="no-underline" asp-controller="Functions" asp-action="Hash">
+                    <div class="card">
+                        <img src="~/images/lock.jpeg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Hash")</h5>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </div>
 
-<div id="features">
-    <div class="container pt-5 pb-5">
-        <h4 class="pb-3">@SharedLocalizer.GetLocalizedHtmlString("Home_Classic")</h4>
+<div id="team" class="white py-5">
+    <div class="container">
         <div class="row">
-            @foreach (var algorithm in Classic)
-            {
-                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
-                @await Html.PartialAsync("_ItemPartial", algorithm);
-            }
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Title")</h1>
+            </div>
         </div>
-        <h4 class="pb-3 pt-2">@SharedLocalizer.GetLocalizedHtmlString("Home_Symmetric")</h4>
-        <div class="row">
-            @foreach (var algorithm in Symmetric)
-            {
-                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
-                @await Html.PartialAsync("_ItemPartial", algorithm);
-            }
-        </div>
-        <h4 class="pb-3 pt-2">@SharedLocalizer.GetLocalizedHtmlString("Home_Asymmetric")</h4>
-        <div class="row">
-            @foreach (var algorithm in Asymmetric)
-            {
-                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
-                @await Html.PartialAsync("_ItemPartial", algorithm);
-            }
-        </div>
-        <h4 class="pb-3 pt-2">@SharedLocalizer.GetLocalizedHtmlString("Home_Math")</h4>
-        <div class="row">
-            @foreach (var algorithm in Math)
-            {
-                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
-                @await Html.PartialAsync("_ItemPartial", algorithm);
-            }
-        </div>
-        <h4 class="pb-3 pt-2">@SharedLocalizer.GetLocalizedHtmlString("Home_Hash")</h4>
-        <div class="row">
-            @foreach (var algorithm in Hash)
-            {
-                algorithm.Title = SharedLocalizer.GetLocalizedHtmlString(algorithm.Title);
-                @await Html.PartialAsync("_ItemPartial", algorithm);
-            }
+        <div class="row pt-5">
+            <div class="col-12 col-md-4 col-sm-6 team">
+                <img class="w-100 team-member" src="~/images/ahmed.gif" alt="Alternate Text" />
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 team">
+                <img class="w-100 team-member" src="~/images/hala.gif" alt="Alternate Text" />
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 team">
+                <img class="w-100 team-member" src="~/images/etaf.gif" alt="Alternate Text" />
+            </div>
         </div>
     </div>
 </div>
