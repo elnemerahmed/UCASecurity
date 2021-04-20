@@ -48,6 +48,10 @@ body {
     background-color: #ffd74b;
 }
 
+.bordered {
+    border: 5px solid gold;
+}
+
 .team {
     padding: 10px 80px;
 }
