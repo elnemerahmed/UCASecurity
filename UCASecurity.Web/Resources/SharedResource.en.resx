@@ -187,10 +187,13 @@
     <value>Advanced Algorithms</value>
   </data>
   <data name="Home_Asymmetric" xml:space="preserve">
-    <value>Asymmetric Encryption Algorithms</value>
+    <value>Asymmetric Encryption</value>
   </data>
   <data name="Home_Classic" xml:space="preserve">
     <value>Classical Encryption Algorithms</value>
+  </data>
+  <data name="Home_Features_Title" xml:space="preserve">
+    <value>Features</value>
   </data>
   <data name="Home_Hash" xml:space="preserve">
     <value>Hash Algorithms</value>
@@ -199,7 +202,7 @@
     <value>A new generation of cloud enryption online tool for educational purpuses, developed as a graduation project for Cryptography II Course.</value>
   </data>
   <data name="Home_Hero_Title" xml:space="preserve">
-    <value>UCASecurity online tool</value>
+    <value>UCAS Crypto Tool</value>
   </data>
   <data name="Home_Index_Title" xml:space="preserve">
     <value>Home Page</value>
@@ -208,7 +211,7 @@
     <value>Math Utilities</value>
   </data>
   <data name="Home_Symmetric" xml:space="preserve">
-    <value>Symmetric Encryption Algorithms</value>
+    <value>Symmetric Encryption</value>
   </data>
   <data name="Home_Team_Description" xml:space="preserve">
     <value>Meet the team</value>
@@ -216,11 +219,14 @@
   <data name="Home_Team_Title" xml:space="preserve">
     <value>Who Are we?</value>
   </data>
+  <data name="Home_Tools_Title" xml:space="preserve">
+    <value>Tools</value>
+  </data>
   <data name="Layout_About" xml:space="preserve">
     <value>About</value>
   </data>
   <data name="Layout_Brand" xml:space="preserve">
-    <value>UCASecurity</value>
+    <value>UCAS Crypto Tool</value>
   </data>
   <data name="Layout_Features" xml:space="preserve">
     <value>Features</value>
@@ -230,6 +236,37 @@
   </data>
   <data name="Layout_Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Learn_AES" xml:space="preserve">
+    <value>AES  ( Advanced Encryption Standard) Algorithm, established by NIST as a symmetric encryption algorithm, it’s considered as a secure algorithm due to its key length. all of AES operations are performed on 8-bit bytes. In particular, the arithmetic operations of addition, multiplication, and division are performed over the finite field GF(28), The cipher takes a plaintext block size of 128 bits, or 16 bytes. The key length can be 16, 24, or 32 bytes (128, 192, or 256 bits). The algorithm is referred to as AES-128, AES-192, or AES-256, depending on the key length. Each round has it’s new generated key.</value>
+  </data>
+  <data name="Learn_BlowFish" xml:space="preserve">
+    <value>Blowfish is an encryption technique designed by Bruce Schneier in 1993 as an alternative to DES Encryption Technique. It is significantly faster than DES and provides a good encryption rate with no effective cryptanalysis technique found until now. It is one of the first, secure block ciphers not subject to any patents and hence freely available for anyone to use. in Blowfish the blockSize is 64-bits and the keySize is 32-bits.</value>
+  </data>
+  <data name="Learn_Caesar" xml:space="preserve">
+    <value>Caesar cipher is a classic example of ancient cryptography and is said to have been used by Julius Caesar. The Caesar cipher is based on transposition and involves shifting each letter of the plaintext message by a certain number of letters and it’s the key of the cipher. The ciphertext can be decrypted by applying the same number of shifts in the opposite direction. This type of encryption is known as a substitution cipher, due to the substitution of one letter for another in a consistent fashion.</value>
+  </data>
+  <data name="Learn_DES" xml:space="preserve">
+    <value>The DES (Data Encryption Standard) algorithm is a symmetric-key block cipher created in the early 1970s by an IBM team and adopted by the (NIST). that was the most widely used encryption scheme. Before the publishing of AES, The algorithm takes the plain text in 64-bit blocks and converts them into ciphertext using 48-bit keys. it depends essentially on permutations.</value>
+  </data>
+  <data name="Learn_PlayFair" xml:space="preserve">
+    <value>The Playfair cipher (Playfair square) is a type of substitution cipher used for the encryption of data &amp; Introduced in 1854. It involved the use of keys that arrange alphabetical letters in geometric patterns in order to encode messages that we encrypt a pair of alphabets(digraphs) instead of a single alphabet.</value>
+  </data>
+  <data name="Learn_RailFence" xml:space="preserve">
+    <value>Rail Fence cipher is a transposition cipher that the plaintext is written downwards and diagonally on successive rails of an imaginary fence. When we reach the bottom rail, we traverse upwards moving diagonally, after reaching the top rail, the direction is changed again. Thus the alphabets of the message are written in a zig-zag manner. After each alphabet has been written, the individual rows are combined to obtain the cipher-text.</value>
+  </data>
+  <data name="Learn_RC2" xml:space="preserve">
+    <value>RC2 (also known as ARC2) is a symmetric-key block cipher designed by Ron Rivest in 1987. "RC" stands for "Ron's Code" or "Rivest Cipher"; 
+
+The block size is 8 bytes (64 bits). The input data is divided into blocks of 8 bytes and then each of them is processed separately. RC2 depends on two core rounds, Mixing and Mashing Rounds.
+Now, RC2 is vulnerable to a related-key attack using 234 chosen plaintexts</value>
+  </data>
+  <data name="Learn_RSA" xml:space="preserve">
+    <value>The RSA algorithm is the basis of a cryptosystem which enables asymmetric  encryption and is widely used to secure sensitive data, particularly when it is being sent over an insecure network such as the internet. RSA was first publicly described in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman of the Massachusetts Institute of Technology, through the 1973 creation of a public key algorithm.
+Public key cryptography, uses two different but mathematically linked keys (one public and one private). The public key can be shared with everyone, whereas the private key must be kept secret. In RSA cryptography, both the public and the private keys can encrypt a message; the opposite key from the one used to encrypt a message is used to decrypt it. This attribute is one reason why RSA has become the most widely used asymmetric algorithm: It provides a method to assure the confidentiality, integrity, authenticity, and non-repudiation of electronic communications and data storage.</value>
+  </data>
+  <data name="Learn_Vigenare" xml:space="preserve">
+    <value>Vigenère cipher is a type of substitution cipher invented by the 16th-century French cryptographer Blaise de Vigenère and used for data encryption in which the original plaintext structure is somewhat concealed in the ciphertext by using several different monoalphabetic substitution ciphers rather than just one.The key specifies which particular substitution is to be employed for encrypting each letter in the plaintext.</value>
   </data>
   <data name="Math_GCD_Input_1" xml:space="preserve">
     <value>First Number</value>

@@ -15,16 +15,7 @@
         <div class="row pt-3">
             @foreach (var algorithm in Asymmetric)
             {
-                <div class="pt-2 col-12 col-md-3 col-sm-4">
-                    <a class="no-underline" asp-controller="@algorithm.Controller" asp-action="@algorithm.Action">
-                        <div class="card">
-                            <img src="~/images/@algorithm.image" class="card-img-top" alt="">
-                            <div class="card-body text-center">
-                                <h5 class="card-text">@SharedLocalizer.GetLocalizedHtmlString(algorithm.Title)</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                @await Html.PartialAsync("_ItemPartial", algorithm);
             }
         </div>
     </div>
