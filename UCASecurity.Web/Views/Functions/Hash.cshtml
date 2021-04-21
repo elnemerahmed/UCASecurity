@@ -14,10 +14,12 @@
     </div>
     <div class="row">
         <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
             <form>
                 <div class="mb-3">
                     <label for="text">@SharedLocalizer.GetLocalizedHtmlString("Hash_Text")</label>
-                    <textarea id="text" class="form-control"></textarea>
+                    <textarea id="text" class="form-control copy"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="md5">@SharedLocalizer.GetLocalizedHtmlString("Hash_MD5")</label>
@@ -47,7 +49,7 @@
                     <label for="whirlpool">@SharedLocalizer.GetLocalizedHtmlString("Hash_Whirlpool")</label>
                     <input id="whirlpool" type="text" class="form-control" readonly />
                 </div>
-            </form> 
+            </form>
         </div>
     </div>
 </div>
